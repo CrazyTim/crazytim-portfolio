@@ -184,12 +184,11 @@ a, a:visited {
 }
 
 .header .overview {
-  font-size: 15pt;
-  margin: 18px 0 0 0;
+  font-size: 14pt;
+  margin: 0 0 24px 0;
 }
 
 .header .links {
-  margin: 24px 0 0 0;
 }
 
   .header .links a {
@@ -252,13 +251,13 @@ a, a:visited {
 h1 {
   font-size: 27pt;
   font-weight: 400;
-  margin: 0 0 0 0;
+  margin: 0 0 10px 0;
 }
 
 h2 {
-  font-size: 15pt;
+  font-size: 14pt;
   font-weight: 400;
-  margin: 10px 0 20px 0;
+  margin: 0 0 0 0;
 }
 
 h3 {
@@ -266,6 +265,12 @@ h3 {
   font-weight: 400;
   margin: 0 0 30px;
   color: #353535;
+}
+
+.location {
+  font-size: 14pt;
+  font-weight: 400;
+  margin: 0 0 30px 0;
 }
 
 .no-line-break {

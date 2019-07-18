@@ -6,7 +6,7 @@
 
 html, body {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 10pt;
+	font-size: 15px;
 	margin: 0;
 	padding: 0;
 }
@@ -18,18 +18,22 @@ ul {
 }
 
 li::before {
-  content: ">";
-  color: #c12207;
-  font-size: 19px;
+  content: "•";
+  color: #d46f5f;
+  font-size: 130%;
   vertical-align: middle;
   font-weight: bold;
-  padding-right: 5px;
-  margin-left: -15px;
+  padding-right: 9px;
+  margin-left: -20px;
+}
+
+li {
+  line-height: 140%;
+  margin-bottom: 10px;
 }
 
 .item .tag {
-	font-family: 'consolas', monospace;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: normal;
   color: #484848;
   padding: 3px 5px 4px 5px;
@@ -41,8 +45,8 @@ li::before {
 }
 
 .item .title {
-	font-size: 16pt;
-  /*font-weight: 500;*/
+	font-size: 17px;
+  font-weight: 600;
   /* font-style: italic; */
   margin: -3px 0 5px 0;
 }
@@ -52,9 +56,9 @@ li::before {
 }
 
 .item .platform {
-	font-size: 11pt;
+	font-size: 15px;
   font-weight: 100;
-  margin: 0 0 18px 0;
+  margin: 0 0 10px 0;
 }
 
 .item .install {
@@ -117,7 +121,7 @@ li::before {
 }
 
 .item .tags {
-	margin: 0 0 8px 0;
+	margin: 0 0 16px 0;
 }
 
 .page {
@@ -130,26 +134,22 @@ li::before {
 
 a, a:visited {
   color: #b93924;
-  padding: 0px 2px;
   transition: background-color .2s, color .2s;
+  text-decoration: none;
 }
 
 .demo a, .demo a:visited {
   text-decoration: none;
-  background-color: #d05f4d;
   display: inline-block;
-  padding: 5px 9px 6px;
-  border-radius: 3px;
   cursor: pointer;
-  font-family: consolas;
-  color: white;
-  font-size: 14px;
+  color: #b93924;
+  font-size: 15px;
   opacity: .9;
   margin-top: 10px;
 }
 
 .demo a:hover {
-  background-color: #de715f;
+  /* background-color: #de715f; */
 }
 
 .header-wrapper {
@@ -159,7 +159,7 @@ a, a:visited {
 .header {
 	max-width: 875px;
   margin: 0 auto;
-  padding: 40px 20px 50px;
+  padding: 40px 20px 30px;
   color: white;
   font-weight: 100;
   font-size: 18pt;
@@ -167,14 +167,25 @@ a, a:visited {
 }
 
 .header .overview {
-  font-size: 14pt;
-  margin: 0 0 24px 0;
+  font-size: 17px;
+  margin: 0 0 24px -10px;
+
+}
+
+.header-wrapper.about-me {
+	background-color: #efefef;
+}
+
+.header-wrapper.about-me .header {
+	color: black;
 }
 
 .header .links {
+  margin: 15px 0 24px 0;
 }
 
   .header .links a {
+  	white-space: nowrap;
     text-decoration: none;
     padding: 0;
     fill: #000;
@@ -202,7 +213,6 @@ a, a:visited {
     font-size: 14px;
     text-decoration: none;
     padding: 0px 5px 0px 8px;
-    font-family: consolas;
   }
 
   .header .links a:hover {
@@ -226,43 +236,39 @@ a, a:visited {
 
   .header .links .icon-email {
   	height: 15px;
-    padding: 5px 0 1px;
+    padding: 2px 0 1px;
   }
 
 
 
 h1 {
-  font-size: 27pt;
-  font-weight: 400;
-  margin: 0 0 10px 0;
+  font-size: 32px;
+ 	font-weight: 400;
+  margin: 0 0 15px 0;
+  color: #fff;
 }
 
 h2 {
-  font-size: 14pt;
-  font-weight: 400;
-  margin: 0 0 0 0;
-}
-
-h3 {
-  font-size: 27pt;
-  font-weight: 400;
-  margin: 0 0 20px;
-  color: #353535;
-}
-
-.location {
-  font-size: 14pt;
-  font-weight: 400;
-  margin: 0 0 30px 0;
+  font-size: 17px;
+  font-weight: 100;
+  margin: 0 0 10px 0;
 }
 
 .no-line-break {
   white-space: nowrap;
 }
 
+h3 {
+  font-size: 22px;
+ 	font-weight: 400;
+  margin: 0 0 15px 0;
+  color: #353535;
+}
+
 
 
 @media only screen and (max-width: 900px) {
+
   .page {
     padding-left:20px;
     padding-right:20px;
@@ -273,6 +279,7 @@ h3 {
 
 
 @media only screen and (max-width: 800px) {
+
   .item img {
     width: auto;
     height: 190px;
@@ -289,6 +296,7 @@ h3 {
 }
 
 @media only screen and (max-width: 650px) {
+
   .item img {
     height: 180px;
   }
@@ -298,16 +306,27 @@ h3 {
   }
 
   .item .title {
-    font-size: 17pt;
     margin-bottom:0px;
-  }
-
-  .item .platform {
-    font-size: 13pt;
   }
 
   .item .content {
     margin-left: 25px;
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+	
+  .item img {
+    height: 100px;
+  }
+
+  .item {
+    grid-template-columns: 80px auto;
+  }
+
+  .item .tag {
+  	font-size: 12px;
   }
 
 }

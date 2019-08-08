@@ -1,4 +1,4 @@
-### Guiding Principles
+### Main Goals
 
 - Show my experience in certain tech stacks.
 - Explain how I have solved actual business problems.

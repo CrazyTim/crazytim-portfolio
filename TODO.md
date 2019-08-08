@@ -1,8 +1,6 @@
 ### TODO:
-- move location to under title, no need to be a button.
 - only show the first couple of important tags, the remainder hidden by "plus 5 more..." label, so as not to overwhelm.
 - explain how I helped solve actual business problems
-- make item buttons larger same as ones in header? (only small difference, might as well)
 
 ##### Mario:
 - Rosella too quiet compared to the others

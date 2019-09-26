@@ -45,6 +45,7 @@ li {
 
 .item:last-of-type {
 	border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .item .tag {
@@ -126,18 +127,21 @@ li {
   overflow: hidden;
 	box-shadow: 7px 11px 15px -7px rgba(39, 0, 0, 0.3);
   max-height: 212px;
+  border-radius: 4px;
 }
 
 .item .img img {
 	width: auto;
 	max-height: 213px;
-	border-radius: 2px;
+}
+
+.page, .header {
+  padding: 40px 50px 30px;
 }
 
 .page {
 	max-width: 875px;
 	margin: 0 auto;
-	padding: 40px 20px 10px;
 	display: grid;
 	grid-row-gap: 20px;
 }
@@ -155,7 +159,6 @@ a, a:visited {
 .header {
 	max-width: 875px;
   margin: 0 auto;
-  padding: 40px 20px 30px;
   color: white;
   font-weight: 100;
   font-size: 18pt;
@@ -275,18 +278,18 @@ h3 {
 
 @media only screen and (max-width: 800px) {
 
-	.item {
-		grid-template-columns: 260px auto;
-	}
-
-  .page {
-  	padding-bottom:0px;
+  .page, .header {
+    padding: 40px 40px 30px;
   }
 
 }
 
 
 @media only screen and (max-width: 700px) {
+
+  .page, .header {
+    padding: 40px 30px 30px;
+  }
 
 	.item {
 		grid-template-columns: 160px auto;
@@ -302,16 +305,24 @@ h3 {
 
 @media only screen and (max-width: 550px) {
 
+  .page, .header {
+    padding: 40px 20px 30px;
+  }
+
 	.item {
 		grid-template-columns: auto;
 		padding-bottom: 40px;
 	}
 
+  .item:last-of-type {
+    padding-bottom: 0;
+  }
+
 	.item .img {
 		grid-row: 1;
 		margin-bottom: 24px;
 		border: solid 1px #d6d6d6;
-		max-height: 158px;
+		max-height: 150px;
 		max-width: 370px;
 		width: calc(100% - 15px); /* ensure shadow isn't cut off */
   }

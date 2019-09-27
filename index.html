@@ -1,293 +1,290 @@
+---
+layout: null
+---
+
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+  <head>
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139570049-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		  gtag('config', 'UA-139570049-1');
-		</script>
+    {% include google-analytics.html %}
 
-		<title>CrazyTim</title>
-		<meta charset="utf-8"/>
-		<meta name=viewport content="width=device-width, initial-scale=1.0">
-		<meta name="robots" content="noindex, nofollow">
-		<base target="_blank">
+    <title>CrazyTim</title>
+    <meta charset="utf-8"/>
+    <meta name=viewport content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <base target="_blank">
 
-		<link rel="stylesheet" type="text/css" href="style.css">
-		
-		<script src="main.js"></script>
-		
-		<script>
-			window.addEventListener('DOMContentLoaded', () => {
-				initalise();
-			});
-		</script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <script src="main.js"></script>
+    
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        initalise();
+      });
+    </script>
 
-	</head>
+  </head>
 
-	<body>
+  <body>
 
-		<div class="header-wrapper">
-			<div class="header">
+    <div class="header-wrapper">
+      <div class="header">
 
-				<h1 class="title">CrazyTim</h1>
+        <h1 class="title">CrazyTim</h1>
 
-				<h2>Full Stack Software Developer / Designer</h2>
+        <h2>Full Stack Software Developer / Designer</h2>
 
-				<h2>Melbourne Australia</h2>
+        <h2>Melbourne Australia</h2>
 
-				<div class="links">
+        <div class="links">
 
-					<div><a href="mailto:impdeveloper@gmail.com">
-						<svg class="icon-email" viewBox="0 0 28 28"><title>Icon: @ symbol</title><path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"/></svg><span>impdeveloper@gmail.com</span>
-					</a></div>
+          <div><a href="mailto:impdeveloper@gmail.com">
+            <svg class="icon-email" viewBox="0 0 28 28"><title>Icon: @ symbol</title><path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"/></svg><span>impdeveloper@gmail.com</span>
+          </a></div>
 
-					<div><a href="https://stackoverflow.com/users/737393/crazytim">
-						<svg class="icon-so" viewBox="0 0 23.6 28"><title>Logo: Stack Overflow</title><path d="M20 25.5V18h2.5v10H0V18h2.5v7.5"/><path d="M5.2 17.3l12.2 2.6.5-2.4-12.1-2.6-.6 2.4zm1.7-5.8l11.3 5.3 1.1-2.3L7.9 9.2l-1 2.3zM10 5.9l9.6 8 1.6-1.9-9.6-8L10 5.9zM16.2 0l-2 1.5 7.5 10 2-1.5-7.5-10zM5 23h12.5v-2.5H5V23z"/></svg><span>Stack Overflow</span>
-					</a></div>
+          <div><a href="https://stackoverflow.com/users/737393/crazytim">
+            <svg class="icon-so" viewBox="0 0 23.6 28"><title>Logo: Stack Overflow</title><path d="M20 25.5V18h2.5v10H0V18h2.5v7.5"/><path d="M5.2 17.3l12.2 2.6.5-2.4-12.1-2.6-.6 2.4zm1.7-5.8l11.3 5.3 1.1-2.3L7.9 9.2l-1 2.3zM10 5.9l9.6 8 1.6-1.9-9.6-8L10 5.9zM16.2 0l-2 1.5 7.5 10 2-1.5-7.5-10zM5 23h12.5v-2.5H5V23z"/></svg><span>Stack Overflow</span>
+          </a></div>
 
-	 				<div><a href="https://github.com/CrazyTim">
-	 					<svg class="icon-git" viewBox="0 0 28 28"><title>Logo: GitHub</title><path d="M13.97 1.57c-7.03 0-12.733 5.703-12.733 12.74 0 5.622 3.636 10.393 8.717 12.084.637.13.87-.277.87-.615 0-.302-.013-1.103-.02-2.165-3.54.77-4.29-1.707-4.29-1.707-.578-1.473-1.413-1.863-1.413-1.863-1.154-.79.09-.775.09-.775 1.276.104 1.96 1.316 1.96 1.312 1.135 1.936 2.99 1.393 3.712 1.06.116-.823.445-1.384.81-1.704-2.83-.32-5.802-1.414-5.802-6.293 0-1.39.496-2.527 1.312-3.418-.132-.322-.57-1.617.123-3.37 0 0 1.07-.343 3.508 1.305 1.016-.282 2.105-.424 3.188-.43 1.082 0 2.167.156 3.198.44 2.43-1.65 3.498-1.307 3.498-1.307.695 1.754.258 3.043.13 3.37.815.903 1.314 2.038 1.314 3.43 0 4.893-2.978 5.97-5.814 6.286.458.388.876 1.16.876 2.358 0 1.703-.016 3.076-.016 3.482 0 .334.232.748.877.61 5.056-1.687 8.7-6.456 8.7-12.08-.055-7.058-5.75-12.757-12.792-12.75z"/></svg><span>Github</span>
-					</a></div>
+          <div><a href="https://github.com/CrazyTim">
+            <svg class="icon-git" viewBox="0 0 28 28"><title>Logo: GitHub</title><path d="M13.97 1.57c-7.03 0-12.733 5.703-12.733 12.74 0 5.622 3.636 10.393 8.717 12.084.637.13.87-.277.87-.615 0-.302-.013-1.103-.02-2.165-3.54.77-4.29-1.707-4.29-1.707-.578-1.473-1.413-1.863-1.413-1.863-1.154-.79.09-.775.09-.775 1.276.104 1.96 1.316 1.96 1.312 1.135 1.936 2.99 1.393 3.712 1.06.116-.823.445-1.384.81-1.704-2.83-.32-5.802-1.414-5.802-6.293 0-1.39.496-2.527 1.312-3.418-.132-.322-.57-1.617.123-3.37 0 0 1.07-.343 3.508 1.305 1.016-.282 2.105-.424 3.188-.43 1.082 0 2.167.156 3.198.44 2.43-1.65 3.498-1.307 3.498-1.307.695 1.754.258 3.043.13 3.37.815.903 1.314 2.038 1.314 3.43 0 4.893-2.978 5.97-5.814 6.286.458.388.876 1.16.876 2.358 0 1.703-.016 3.076-.016 3.482 0 .334.232.748.877.61 5.056-1.687 8.7-6.456 8.7-12.08-.055-7.058-5.75-12.757-12.792-12.75z"/></svg><span>Github</span>
+          </a></div>
 
-				</div>
+        </div>
 
-			</div>
-		</div>
+      </div>
+    </div>
 
-		<div class="header-wrapper about-me">
-			<div class="header">
+    <div class="header-wrapper about-me">
+      <div class="header">
 
-				<h3>About Me</h3>
+        <h3>About Me</h3>
 
-				<ul class="overview">
-					<li>Love designing and <span class="no-line-break">buliding things</span></li>
-					<li>Very organised</li>
-					<li>Enjoy working in a team, contributing, learning, and <span class="no-line-break">sharing knowledge</span></li>
-					<li>"You don't find the happy life, you make it." - Thomas S Monson</li>
-				</ul>
+        <ul class="overview">
+          <li>Love designing and <span class="no-line-break">buliding things</span></li>
+          <li>Very organised</li>
+          <li>Enjoy working in a team, contributing, learning, and <span class="no-line-break">sharing knowledge</span></li>
+          <li>"You don't find the happy life, you make it." - Thomas S Monson</li>
+        </ul>
 
-			</div>
-		</div>
+      </div>
+    </div>
 
-		<div class="page">
-			
-			<h3>Some of my Projects</h3>
-			
-			<div class="item">
-				<div class="img">
-					<img src="img/item-img-13.jpg"/>
-				</div>
-				<div class="title">Job Scheduler - Buildsafe Australia</div>
-				<div class="platform">windows desktop app (2019)</div>
-				<div class="tags">vb.net,winforms,php,javascript,html,css,json,ms-sql,filemaker,google-directions-api,ui-design,dev-ops</div>
-				<div class="desc">
-					<p>I am currently the designer and lead programmer for this in-house desktop application. It allows us to prepare and schedule work across 100+ vehicles and 13+ depots.</p>
-					<p>I am responsible for keeping it running smoothly (including monitoring and debugging), and I work with stakeholders to help scope new features, implement, test, and deploy.</p>
-					<p>Emphasis is placed on streamlining business processes, and being easy to use for non-technical staff. It is used across many departments, such as operations, drafting, auditing, factory, depot managers, finance, and training.</p>
-				</div>
-			</div>
+    <div class="page">
+      
+      <h3>Some of my Projects</h3>
+      
+      <div class="item">
+        <div class="img">
+          <img src="assets/img/item-img-13.jpg"/>
+        </div>
+        <div class="title">Job Scheduler - Buildsafe Australia</div>
+        <div class="platform">windows desktop app (2019)</div>
+        <div class="tags">vb.net,winforms,php,javascript,html,css,json,ms-sql,filemaker,google-directions-api,ui-design,dev-ops</div>
+        <div class="desc">
+          <p>I am currently the designer and lead programmer for this in-house desktop application. It allows us to prepare and schedule work across 100+ vehicles and 13+ depots.</p>
+          <p>I am responsible for keeping it running smoothly (including monitoring and debugging), and I work with stakeholders to help scope new features, implement, test, and deploy.</p>
+          <p>Emphasis is placed on streamlining business processes, and being easy to use for non-technical staff. It is used across many departments, such as operations, drafting, auditing, factory, depot managers, finance, and training.</p>
+        </div>
+      </div>
 
-			<div class="item">
-				<div class="img">
-					<img src="img/item-img-11.jpg"/>
-				</div>
-				<div class="title">Countdown</div>
-				<div class="platform">web animation (2018)</div>
-				<div class="tags">three.js,tween.js</div>
-				<div class="desc">
-					<p>A replication of the countdown animation in the film <a href="https://www.rottentomatoes.com/m/mission_to_mars/">Mission to Mars</a>. I had fun referencing the movie and learned a lot.</p> 
-					<p>I love the design of this binary timer. The rings appear to be resting on a translucent surface, which gives a sense of depth as they rotate through it. I used many layers of transparency beneath the rings to create this effect. It was challenging to position the camera and perspective the same as the movie.</p> 
-					<p>An interesting fact: the animation lasts about a minute, which wasn't actually long enough for the scene in the movie!</p>
-					<a class="demo" href="https://crazytim.info/countdown/">play animation</a>
-				</div>
-			</div>
+      <div class="item">
+        <div class="img">
+          <img src="assets/img/item-img-11.jpg"/>
+        </div>
+        <div class="title">Countdown</div>
+        <div class="platform">web animation (2018)</div>
+        <div class="tags">three.js,tween.js</div>
+        <div class="desc">
+          <p>A replication of the countdown animation in the film <a href="https://www.rottentomatoes.com/m/mission_to_mars/">Mission to Mars</a>. I had fun referencing the movie and learned a lot.</p> 
+          <p>I love the design of this binary timer. The rings appear to be resting on a translucent surface, which gives a sense of depth as they rotate through it. I used many layers of transparency beneath the rings to create this effect. It was challenging to position the camera and perspective the same as the movie.</p> 
+          <p>An interesting fact: the animation lasts about a minute, which wasn't actually long enough for the scene in the movie!</p>
+          <a class="demo" href="https://crazytim.github.io/countdown/">play animation</a>
+        </div>
+      </div>
 
-			<div class="item">
-				<div class="img">
-					<img src="img/item-img-01.jpg"/>
-				</div>
-				<div class="title">Mario Soundboard</div>
-				<div class="platform">android web app (2018)</div>
-				<div class="tags">html,css,web-audio,audio-editing</div>
-				<div class="desc">
-					<p>An unofficail sound-effects app for the <a href="https://www.kotaku.com.au/2017/06/mario-themed-monopoly-gamerhas-power-ups-and-boss-battles">Monopoly Gamer board game</a>. It is a wonderful showcase of the iconic sounds and graphics of the Mario franchise.</p>
-					<p>Visit on an Android device, and click "add to home screen".</p>
-					<a class="demo" href="https://crazytim.info/mario/">open app</a>
-				</div>
-			</div>
+      <div class="item">
+        <div class="img">
+          <img src="assets/img/item-img-01.jpg"/>
+        </div>
+        <div class="title">Mario Soundboard</div>
+        <div class="platform">android web app (2018)</div>
+        <div class="tags">html,css,web-audio,audio-editing</div>
+        <div class="desc">
+          <p>An unofficail sound-effects app for the <a href="https://www.kotaku.com.au/2017/06/mario-themed-monopoly-gamerhas-power-ups-and-boss-battles">Monopoly Gamer board game</a>. It is a wonderful showcase of the iconic sounds and graphics of the Mario franchise.</p>
+          <p>Visit on an Android device, and click "add to home screen".</p>
+          <a class="demo" href="https://crazytim.github.io/mario/">open app</a>
+        </div>
+      </div>
 
-			<div class="item">
-				<div class="img">
-					<img src="img/item-img-12.jpg"/>
-				</div>
-				<div class="title">Tap-n-draw</div>
-				<div class="platform">android web app (2017)</div>
-				<div class="tags">php,html,css,jquery,ui-design</div>
-				<div class="desc">
-					<p>A simple app to help you play pictionary! Like if you're on holiday and forgot to bring pictionary with you :).</p>
-					<p>Visit on an Android device, and click "add to home screen".</p>
-					<a class="demo" href="https://crazytim.info/tap-n-draw/">open app</a>
-				</div>
-			</div>
+      <div class="item">
+        <div class="img">
+          <img src="assets/img/item-img-12.jpg"/>
+        </div>
+        <div class="title">Tap-n-draw</div>
+        <div class="platform">android web app (2017)</div>
+        <div class="tags">php,html,css,jquery,ui-design</div>
+        <div class="desc">
+          <p>A simple app to help you play pictionary! Like if you're on holiday and forgot to bring pictionary with you :).</p>
+          <p>Visit on an Android device, and click "add to home screen".</p>
+          <a class="demo" href="https://crazytim.github.io/tap-n-draw/">open app</a>
+        </div>
+      </div>
 
-			<div class="item">
-				<div class="img">
-					<img src="img/item-img-09.jpg"/>
-				</div>
-				<div class="title">Find-A-Word Generator</div>
-				<div class="platform">script/plugin (2017)</div>
-				<div class="tags">canvas,ui-design</div>
-				<div class="desc">
-					<p>A fun Python algorithm I wrote in Uni. A few years later I converted it to Javascript and added a html interface.</p>
-					<p>I think its destined to be an Adobe Illustrator/InDesign plugin.</p>
-				</div>
-			</div>
+      <div class="item">
+        <div class="img">
+          <img src="assets/img/item-img-09.jpg"/>
+        </div>
+        <div class="title">Find-A-Word Generator</div>
+        <div class="platform">script/plugin (2017)</div>
+        <div class="tags">canvas,ui-design</div>
+        <div class="desc">
+          <p>A fun Python algorithm I wrote in Uni. A few years later I converted it to Javascript and added a html interface.</p>
+          <p>I think its destined to be an Adobe Illustrator/InDesign plugin.</p>
+        </div>
+      </div>
 
-			<div class="item">
-				<div class="img">
-					<img src="img/item-img-03.jpg"/>
-				</div>
-				<div class="title">Soft Toy Storage</div>
-				<div class="platform">website & branding (2015)</div>
-				<div class="tags">paypal,google-analytics</div>
-				<div class="desc">
-					<p>I did just about everything on this low-budget project: website design, logo design, icons and graphics, copywriting, image gallery, and assembly instructions.</p>
-					<p>Also included was a sales heat map, and an automated Paypal payment plan.</p>
-					<a class="demo" href="https://softtoystorage.com.au">visit softtoystorage.com.au</a>
-					<a class="demo" href="https://crazytim.info/soft-toy-storage-manual/">see assembly instructions</a>
-				</div>
-			</div>
+      <div class="item">
+        <div class="img">
+          <img src="assets/img/item-img-03.jpg"/>
+        </div>
+        <div class="title">Soft Toy Storage</div>
+        <div class="platform">website & branding (2015)</div>
+        <div class="tags">paypal,google-analytics</div>
+        <div class="desc">
+          <p>I did just about everything on this low-budget project: website design, logo design, icons and graphics, copywriting, image gallery, and assembly instructions.</p>
+          <p>Also included was a sales heat map, and an automated Paypal payment plan.</p>
+          <a class="demo" href="https://softtoystorage.com.au">visit softtoystorage.com.au</a>
+          <a class="demo" href="https://crazytim.github.io/soft-toy-storage-manual/">see assembly instructions</a>
+        </div>
+      </div>
 
-			<div class="item">
-				<div class="img">
-					<img src="img/item-img-04.jpg"/>
-				</div>
-				<div class="title">Alternate Dwellings</div>
-				<div class="platform">website (2014)</div>
-				<div class="desc">
-					<p>Work included website design, logo redesign, ad design, copywriting, photo editing, converting builder's plans into graphics, and keeping photos and pricing up-to-date. </p>
-					<!-- <a class="demo" href="https://alternatedwellings.com.au">visit alternatedwellings.com.au</a> -->
-				</div>
-			</div>
+      <div class="item">
+        <div class="img">
+          <img src="assets/img/item-img-04.jpg"/>
+        </div>
+        <div class="title">Alternate Dwellings</div>
+        <div class="platform">website (2014)</div>
+        <div class="desc">
+          <p>Work included website design, logo redesign, ad design, copywriting, photo editing, converting builder's plans into graphics, and keeping photos and pricing up-to-date. </p>
+          <!-- <a class="demo" href="https://alternatedwellings.com.au">visit alternatedwellings.com.au</a> -->
+        </div>
+      </div>
 
-			<div class="item">
-				<div class="img">
-					<img src="img/item-img-02.jpg"/>
-				</div>
-				<div class="title">My Cookbook</div>
-				<div class="platform">prototype ios web app (2012)</div>
-				<div class="tags">mysql,json,jquery,svg,ui-design</div>
-				<div class="desc">
-					<p>Final Uni project. The learning outcomes were:</p>
-					<ul>
-						<li>specify project requirements</li>
-						<li>develop an architecture and design to meet those requirements</li>
-						<li>setup the development environment </li>
-						<li>build and test a proof of concept prototype.</li>
-					</ul>
-					<p>I focused primarily on interface design and navigation.</p>
-				</div>
-			</div>
+      <div class="item">
+        <div class="img">
+          <img src="assets/img/item-img-02.jpg"/>
+        </div>
+        <div class="title">My Cookbook</div>
+        <div class="platform">prototype ios web app (2012)</div>
+        <div class="tags">mysql,json,jquery,svg,ui-design</div>
+        <div class="desc">
+          <p>Final Uni project. The learning outcomes were:</p>
+          <ul>
+            <li>specify project requirements</li>
+            <li>develop an architecture and design to meet those requirements</li>
+            <li>setup the development environment </li>
+            <li>build and test a proof of concept prototype.</li>
+          </ul>
+          <p>I focused primarily on interface design and navigation.</p>
+        </div>
+      </div>
 
-			<div class="item">
-				<div class="img">
-					<img src="img/item-img-15.jpg"/>
-				</div>
-				<div class="title">Uni Graphic Design Projects</div>
-				<div class="platform">(2011)</div>
-				<div class="tags">illustrator,photoshop,in-design,typography,logo-design</div>
-				<div class="desc">
-					<p>Various things I made in Uni.</p>
-					<a class="demo" href="https://crazytim.info/uni-graphic-design/">see samples</a>
-				</div>
-			</div>
+      <div class="item">
+        <div class="img">
+          <img src="assets/img/item-img-15.jpg"/>
+        </div>
+        <div class="title">Uni Graphic Design Projects</div>
+        <div class="platform">(2011)</div>
+        <div class="tags">illustrator,photoshop,in-design,typography,logo-design</div>
+        <div class="desc">
+          <p>Various things I made in Uni.</p>
+          <a class="demo" href="https://crazytim.github.io/uni-graphic-design/">see samples</a>
+        </div>
+      </div>
 
-			<div class="item">
-				<div class="img">
-					<img src="img/item-img-14.jpg"/>
-				</div>
-				<div class="title">Animal Habitats</div>
-				<div class="platform">flash game (2010)</div>
-				<div class="tags">actionscript</div>
-				<div class="desc">
-					<p>Part of a Uni multimedia project. It needs a randomiser.</p>
-					<a class="demo" href="https://crazytim.info/animal-habitats/">play game</a>
-				</div>
-			</div>
+      <div class="item">
+        <div class="img">
+          <img src="assets/img/item-img-14.jpg"/>
+        </div>
+        <div class="title">Animal Habitats</div>
+        <div class="platform">flash game (2010)</div>
+        <div class="tags">actionscript</div>
+        <div class="desc">
+          <p>Part of a Uni multimedia project. It needs a randomiser.</p>
+          <a class="demo" href="https://crazytim.github.io/animal-habitats/">play game</a>
+        </div>
+      </div>
 
-			<div class="item">
-				<div class="img">
-					<img src="img/item-img-07.jpg"/>
-				</div>
-				<div class="title">COD2 Profile Editor</div>
-				<div class="platform">prototype windows desktop app (2006)</div>
-				<div class="tags">game-mod,icon-design</div>
-				<div class="desc">
-					<p>An app I made to help me make custom key bindings for <span class="no-line-break"><a href="https://en.wikipedia.org/wiki/Call_of_Duty_2">Call Of Duty 2</a></span>.</p> 
-					<p>It worked, but mostly looked pretty. The code was rubbish and I didn't know how to implement any of the advanced features I had planned. I received suggestions for improvement but it was never finished. It was a nice idea.</p>
-					<a class="demo" href="https://crazytim.info/cod2-profile-editor/">see screenshots</a>
-				</div>
-			</div>
+      <div class="item">
+        <div class="img">
+          <img src="assets/img/item-img-07.jpg"/>
+        </div>
+        <div class="title">COD2 Profile Editor</div>
+        <div class="platform">prototype windows desktop app (2006)</div>
+        <div class="tags">game-mod,icon-design</div>
+        <div class="desc">
+          <p>An app I made to help me make custom key bindings for <span class="no-line-break"><a href="https://en.wikipedia.org/wiki/Call_of_Duty_2">Call Of Duty 2</a></span>.</p> 
+          <p>It worked, but mostly looked pretty. The code was rubbish and I didn't know how to implement any of the advanced features I had planned. I received suggestions for improvement but it was never finished. It was a nice idea.</p>
+          <a class="demo" href="https://crazytim.github.io/cod2-profile-editor/">see screenshots</a>
+        </div>
+      </div>
 
-			<div class="item">
-				<div class="img">
-					<img src="img/item-img-10.jpg"/>
-				</div>
-				<div class="title">Voyager Episode Archive</div>
-				<div class="platform">prototype flash app (2003)</div>
-				<div class="tags">actionscript,animation,data-collection,data-entry,research,interface-design,audio</div>
-				<div class="desc">
-					<p>A functional Start Trek <a href="https://en.wikipedia.org/wiki/LCARS">LCARS</a> touch interface with sounds (sounds borrowed from a Start Trek computer game).</p>
-					<p>I examined many examples from the show to learn the design language. I wanted the design to be functional and meaningful, while at the same time fun to interact with.</p>
-					<p>Features include:</p>
-					<ul>
-						<li>episode outline and full synopsis</li>
-						<li>category tags</li>
-						<li>stardate </li>
-						<li>star ratings</li>
-						<li>classification rating</li>
-						<li>and up to six photos per episode</li>
-						<li>Episodes can be navigated by season, topic, or chronological timeline</li>
-						<li>Search function and random episode selector</li>
-						<li>contextual help labels.</li>
-					</ul>
-				</div>
-			</div>
+      <div class="item">
+        <div class="img">
+          <img src="assets/img/item-img-10.jpg"/>
+        </div>
+        <div class="title">Voyager Episode Archive</div>
+        <div class="platform">prototype flash app (2003)</div>
+        <div class="tags">actionscript,animation,data-collection,data-entry,research,interface-design,audio</div>
+        <div class="desc">
+          <p>A functional Start Trek <a href="https://en.wikipedia.org/wiki/LCARS">LCARS</a> touch interface with sounds (sounds borrowed from a Start Trek computer game).</p>
+          <p>I examined many examples from the show to learn the design language. I wanted the design to be functional and meaningful, while at the same time fun to interact with.</p>
+          <p>Features include:</p>
+          <ul>
+            <li>episode outline and full synopsis</li>
+            <li>category tags</li>
+            <li>stardate </li>
+            <li>star ratings</li>
+            <li>classification rating</li>
+            <li>and up to six photos per episode</li>
+            <li>Episodes can be navigated by season, topic, or chronological timeline</li>
+            <li>Search function and random episode selector</li>
+            <li>contextual help labels.</li>
+          </ul>
+        </div>
+      </div>
 
-			<div class="item">
-				<div class="img">
-					<img src="img/item-img-06.jpg"/>
-				</div>
-				<div class="title">Super Worm</div>
-				<div class="platform">windows desktop game (2002)</div>
-				<div class="tags">vb.net,winforms,audio,sprites</div>
-				<div class="desc">
-					<p>8 levels, 3 different fruit, and 4 power-ups. I planned to make a level editor but never got around to it. And I can't remember what happens when you get past the last level... probably nothing.</p>
-					<a class="demo" href="https://crazytim.info/super-worm/">see screenshots</a>
-				</div>
-			</div>
+      <div class="item">
+        <div class="img">
+          <img src="assets/img/item-img-06.jpg"/>
+        </div>
+        <div class="title">Super Worm</div>
+        <div class="platform">windows desktop game (2002)</div>
+        <div class="tags">vb.net,winforms,audio,sprites</div>
+        <div class="desc">
+          <p>8 levels, 3 different fruit, and 4 power-ups. I planned to make a level editor but never got around to it. And I can't remember what happens when you get past the last level... probably nothing.</p>
+          <a class="demo" href="https://crazytim.github.io/super-worm/">see screenshots</a>
+        </div>
+      </div>
 
-			<div class="item">
-				<div class="img">
-					<img src="img/item-img-08.jpg"/>
-				</div>
-				<div class="title">Mr Orange's Playtime</div>
-				<div class="platform">flash game (2001)</div>
-				<div class="tags">actionscript,product-design,voice-acting,prototyping,animation</div>
-				<div class="desc">
-					<p>Highschool multimedia project: An educational game for children aged 2-4 designed to help them learn to use a keyboard and mouse!</p>
-					<p>The game features 4 activities centered on basic concepts such as colours, numbers, shapes and sequences. Colourful large icons and fun dialoge engage the childs attention as they learn drag-and-drop, point-and-click, and typing on the keyboard.</p>
-					<p>The year after I made a follow-up game just for fun called Mrs Carrot.</p>
-					<a class="demo" href="https://crazytim.info/mr-orange/">play game</a>
-				</div>
-			</div>
+      <div class="item">
+        <div class="img">
+          <img src="assets/img/item-img-08.jpg"/>
+        </div>
+        <div class="title">Mr Orange's Playtime</div>
+        <div class="platform">flash game (2001)</div>
+        <div class="tags">actionscript,product-design,voice-acting,prototyping,animation</div>
+        <div class="desc">
+          <p>Highschool multimedia project: An educational game for children aged 2-4 designed to help them learn to use a keyboard and mouse!</p>
+          <p>The game features 4 activities centered on basic concepts such as colours, numbers, shapes and sequences. Colourful large icons and fun dialoge engage the childs attention as they learn drag-and-drop, point-and-click, and typing on the keyboard.</p>
+          <p>The year after I made a follow-up game just for fun called Mrs Carrot.</p>
+          <a class="demo" href="https://crazytim.github.io/mr-orange/">play game</a>
+        </div>
+      </div>
 
-		</div>
-		
-	</body>
+    </div>
+    
+  </body>
 </html>

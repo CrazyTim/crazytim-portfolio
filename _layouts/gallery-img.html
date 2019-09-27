@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    {% include google-analytics.html %}
+    
+    <title>{{ title }}</title>
+    <meta charset='utf-8'/>
+    <meta name=viewport content='width=device-width, initial-scale=1.0'>
+    <meta name='robots' content='noindex, nofollow'>
+    <link rel='stylesheet' href='/assets/css/gallery-img.css'>
+  </head>
+  
+  <body>
+
+    {% assign path = page.url | append: 'img/' %}
+    {% for file in site.static_files %}
+      {% if file.path contains path %}
+        <img src='{{ site.baseurl }}{{ file.path }}' alt='image' />
+      {% endif %}
+    {% endfor %}
+
+  </body>
+  
+</html>

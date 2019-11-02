@@ -67,6 +67,20 @@ layout: null
       </div>
     </div>
 
+    <div class="header-wrapper articles">
+      <div class="header">
+
+        <h3>Articles</h3>
+
+        <ul class="overview">
+          {% for article in site.articles %}
+            <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+          {% endfor %}
+        </ul>
+
+      </div>
+    </div>
+
     <div class="page">
 
       <h3>My Projects</h3>

@@ -1,29 +1,6 @@
 ### TODO:
 - only show the first couple of important tags, the remainder hidden by "plus 5 more..." label, so as not to overwhelm.
-- explain how I helped solve actual business problems
-
-##### Mario:
-- Rosella too quiet compared to the others
-- Modes?
-- Stop all button
-- When play star, stop music, but only if not Mario kart mode :(
-
-##### Tap and Draw:
-- More words
-- Icon and app manifest
-- storage-api tag?
-
-##### Resume:
-- add link to folio on resume
-- git (source control)
-- unit testing (xunit)
-- interested in GraphQL, Python, REST, Node.js
-
-##### Cookbook:
-- not working, errors, make new version
-
-##### Find-a-word:
-- needs a live github page
+- simple tag filter
 
 ##### Notes:
 - example: http://www.grokcode.com/programmer-portfolio/

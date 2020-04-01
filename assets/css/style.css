@@ -36,7 +36,7 @@ li {
 .item {
 	display: grid;
 	grid-template-columns: 320px auto;
-	grid-template-rows: repeat(5, auto);
+	grid-template-rows: auto;
 	column-gap: 20px;
 	border-bottom: 1px solid #c523005e;
 	padding-bottom: 50px;
@@ -44,8 +44,8 @@ li {
 }
 
 .item:last-of-type {
-	border-bottom: 0;
-  padding-bottom: 0;
+	border-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 .item .tag {
@@ -93,7 +93,7 @@ li {
 .item .platform {
 	font-size: 15px;
   font-weight: 100;
-  margin: 0 0 10px 0;
+  margin: 0 0 16px 0;
   /* background-color: red; */
 }
 
@@ -144,6 +144,7 @@ li {
 	margin: 0 auto;
 	display: grid;
 	grid-row-gap: 20px;
+  padding-top: 0px;
 }
 
 a, a:visited {
@@ -153,7 +154,7 @@ a, a:visited {
 }
 
 .header-wrapper {
-  background-color: #f1f0eb;
+  /* background-color: #f1f0eb; */
 }
 
 .header-wrapper.title {
@@ -192,7 +193,6 @@ a, a:visited {
     padding: 4px 8px 5px;
     border-radius: 5px;
     background-color: white;
-    background-color: #c3e2f3;
     margin: 3px;
     display: inline-block;
     line-height: 14px;
@@ -281,7 +281,8 @@ h3 {
 @media only screen and (max-width: 800px) {
 
   .page, .header {
-    padding: 40px 40px 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
 }
@@ -290,7 +291,8 @@ h3 {
 @media only screen and (max-width: 700px) {
 
   .page, .header {
-    padding: 40px 30px 30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
 	.item {
@@ -305,16 +307,21 @@ h3 {
 }
 
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
 
   .page, .header {
-    padding: 40px 20px 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
 	.item {
 		grid-template-columns: auto;
 		padding-bottom: 40px;
 	}
+
+  .item .title {
+    font-size: 19px;
+  }
 
   .item:last-of-type {
     padding-bottom: 0;

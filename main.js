@@ -1,4 +1,5 @@
 let items = [];
+const ZERO_WIDTH_SPACE = '&#8203;'; // prevent double-click selection from spilling into adjacent span
 
 function initalise() {
 
@@ -9,7 +10,7 @@ function initalise() {
     let html = '';
     e.innerHTML.split(",").forEach( (w) => {
       if (w.trim() === '') { return; }
-      html += '<span class="tag">' + w.trim().toLowerCase() + '</span>';
+      html += '<span class="tag">' + w.trim().toLowerCase() + ZERO_WIDTH_SPACE + '</span>';
     });
     e.innerHTML = html;
   });

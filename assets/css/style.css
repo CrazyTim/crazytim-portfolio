@@ -55,7 +55,7 @@ ul {
     grid-template-columns: auto;
     font-size: 15px;
     width: 250px;
-    border: solid 1px #d3cbcb;
+    border: solid 1px #969694;
     border-radius: 4px;
     overflow: hidden;
     background-image: url('../img/search.svg');
@@ -154,7 +154,6 @@ li {
   font-weight: 600;
   margin-top: -3px;
   padding: 0 0 5px 0;
-	/* background-color: red; */
 }
 
 .item .content {
@@ -179,16 +178,10 @@ li {
   	background-color: #fbece9;
   }
 
-
 .item .description {
 	font-size: 15px;
   font-weight: 100;
   margin: 0 0 16px 0;
-  /* background-color: red; */
-}
-
-.item .tags {
-	/* background-color: red; */
 }
 
 .item .install {
@@ -275,13 +268,11 @@ a, a:visited {
   .header .links a {
   	white-space: nowrap;
     text-decoration: none;
-    padding: 0;
+    padding: 6px 10px 7px;
     fill: #000;
     color: #000;
     transition: background-color .2s;
-
-    padding: 4px 8px 5px;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: white;
     margin: 3px;
     display: inline-block;
@@ -291,40 +282,20 @@ a, a:visited {
   }
 
   .header .links a svg {
-    height: 17px; 
+    height: 18px; 
     width: 18px;
     vertical-align: middle;
-    padding: 2px 0 2px;
+    padding-right: 8px;
+    box-sizing: content-box;
   }
 
   .header .links a span {
     font-size: 14px;
     text-decoration: none;
-    padding: 0px 5px 0px 8px;
   }
 
   .header .links a:hover {
     background-color: #fff;
-  }
-
-  .header .links .icon-map {
-    height: 18px;
-    padding: 2px 0 1px;
-  }
-
-  .header .links .icon-git {
-  	height: 18px;
-    padding: 2px 0 1px;
-  }
-
-  .header .links .icon-so {
-  	height: 18px;
-    padding: 2px 0 1px;
-  }
-
-  .header .links .icon-email {
-  	height: 15px;
-    padding: 2px 0 1px;
   }
 
 h1 {

@@ -122,14 +122,10 @@ li {
 	grid-template-columns: 320px auto;
 	grid-template-rows: auto;
 	column-gap: 20px;
-	border-bottom: 1px solid #c523005e;
-	padding-bottom: 50px;
   overflow: hidden;
-}
-
-.item:last-of-type {
-	border-bottom: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #c523005e;
 }
 
 .item .tag {

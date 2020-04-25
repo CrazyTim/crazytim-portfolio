@@ -1,4 +1,4 @@
-# Personal Website
+# My portfolio website
 
-## Notes
-- [minima Jekyll theme](https://github.com/jekyll/minima)
+- Jekyll site running on GitHub pages.
+- [Minima theme](https://github.com/jekyll/minima).

@@ -1,4 +1,6 @@
 titles_from_headings:
   enabled: false
 
+include: ['_pages']
+
 theme: minima

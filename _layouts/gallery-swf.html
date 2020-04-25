@@ -6,10 +6,10 @@
     {% include google-analytics.html %}
     
     <title>{{ title }}</title>
-    <meta charset='utf-8'/>
-    <meta name=viewport content='width=device-width, initial-scale=1.0'>
-    <meta name='robots' content='noindex, nofollow'>
-    <link rel='stylesheet' href='/assets/css/gallery-swf.css'>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="/css/gallery-swf.css">
   </head>
   
   <body>
@@ -17,8 +17,8 @@
     {% assign path = page.url | append: 'swf/' %}
     {% for file in site.static_files %}
       {% if file.path contains path %}
-        <object width='{{ page.width }}' height='{{ page.height }}'>
-          <embed src='{{ site.baseurl }}{{ file.path }}' width='100%' height='100%'></embed>
+        <object width="{{ page.width }}" height="{{ page.height }}">
+          <embed src="{{ site.baseurl }}{{ file.path }}" width="100%" height="100%"></embed>
         </object>
       {% endif %}
     {% endfor %}

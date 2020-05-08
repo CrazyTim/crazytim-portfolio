@@ -1,5 +1,5 @@
 let items = [];
-const ZERO_WIDTH_SPACE = '&#8203;'; // prevent double-click selection from spilling into adjacent span
+const ZERO_WIDTH_SPACE = '&#8203;';
 
 function initalise() {
 
@@ -10,26 +10,28 @@ function initalise() {
     let html = '';
     e.innerHTML.split(",").forEach( (w) => {
       if (w.trim() === '') { return; }
-      html += '<span class="tag">' + w.trim().toLowerCase() + ZERO_WIDTH_SPACE + '</span>';
+      html += '<span class="tag">'
+        + w.trim().toLowerCase()
+        + ZERO_WIDTH_SPACE  // prevent double-click selection from spilling into adjacent span
+        + '</span>';
     });
     e.innerHTML = html;
   });
- 
+
   // ensure all links open in a new tab
   document.querySelectorAll("a").forEach( (e) => {
     e.getAttribute("href") && e.hostname !== location.hostname && (e.target = "_blank");
   });
 
-  const filterWrapper = document.querySelector('.filter');
-  const filter = document.querySelector('.filter input');
-  const btnClear = document.querySelector('.filter .btn-clear');
+  const searchBox = document.querySelector('.search input');
+  const searchBoxClearButton = document.querySelector('.search .btn-clear');
 
-  filter.oninput = () => {
-    search(filter.value.toLowerCase());
+  searchBox.oninput = () => {
+    search(searchBox.value.toLowerCase());
   };
 
-  btnClear.onclick = () => {
-    filter.value = '';
+  searchBoxClearButton.onclick = () => {
+    searchBox.value = '';
     search('');
   };
 
@@ -37,7 +39,7 @@ function initalise() {
 
 function search(searchText) {
 
-  const filterWrapper = document.querySelector('.filter');
+  const searchWrapper = document.querySelector('.search');
   const found = findItemsWithTag(searchText);
 
   for (let i=0; i<items.length; i++) {
@@ -49,18 +51,22 @@ function search(searchText) {
     }
   }
 
-  const foundResult = document.querySelector('.filter-wrapper .result')
+  const searchResult = document.querySelector('.search-wrapper .result')
 
   if (found.length == items.length) {
-    filterWrapper.classList.remove('found');
-    foundResult.classList.add('hidden');
+
+    searchWrapper.classList.remove('found');
+    searchResult.classList.add('hidden');
+
   } else {
-    filterWrapper.classList.add('found');
-    foundResult.classList.remove('hidden');
+
+    searchWrapper.classList.add('found');
+    searchResult.classList.remove('hidden');
 
     let m = 'Matches';
     if (found.length == 1) { m = 'Match'; }
-    foundResult.textContent = found.length + ' ' + m;
+    searchResult.textContent = found.length + ' ' + m;
+
   }
 
 }
@@ -73,7 +79,7 @@ function findItemsWithTag(s) {
     for (let j=0; j<tags.length; j++) {
       if (tags[j].textContent.includes(s)) {
         if (s !== '') {
-          tags[j].classList.add('found'); 
+          tags[j].classList.add('found');
         } else {
           tags[j].classList.remove('found');
         }

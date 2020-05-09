@@ -16,3 +16,7 @@ collections:
   articles:
     output: true
     permalink: /blog/:path/
+
+timezone: 'Australia/Melbourne'
+
+encoding: 'utf-8'

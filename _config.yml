@@ -3,4 +3,10 @@ titles_from_headings:
 
 include: ['_pages']
 
-theme: minima
+theme: 'minima'
+
+#items are sorted (default) by date ASC
+collections:
+  articles:
+    output: true
+    permalink: /blog/:path/

@@ -1,6 +1,6 @@
 ### TODO:
-- Add avatar.
-- Make a simple blog.
+- Add avatar image.
+- Publish a few articles.
 
 ##### Notes:
 - example: http://www.grokcode.com/programmer-portfolio/

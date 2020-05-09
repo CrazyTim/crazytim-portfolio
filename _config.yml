@@ -1,6 +1,22 @@
+author:
+  name: 'CrazyTim'
+  email: impdeveloper@gmail.com
+
 titles_from_headings:
   enabled: false
 
+lang: 'en_AU'
+
 include: ['_pages']
 
-theme: minima
+theme: 'minima'
+
+#items are sorted (default) by date ASC
+collections:
+  articles:
+    output: true
+    permalink: /blog/:path/
+
+timezone: 'Australia/Melbourne'
+
+encoding: 'utf-8'

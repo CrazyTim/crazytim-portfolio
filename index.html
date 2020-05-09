@@ -6,12 +6,8 @@ layout: null
 <html lang="en">
   <head>
 
-    {% include google-analytics.html %}
+    {% include head.html %}
 
-    <title>CrazyTim</title>
-    <meta charset="utf-8"/>
-    <meta name=viewport content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
     <base target="_blank">
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -66,6 +62,20 @@ layout: null
           <li>Interested in .NET Core, Javascript, JSON, React, GraphQL, SQL, Node.js</li>
           <li>Enjoy working in a team, contributing, learning, and <span class="no-line-break">sharing knowledge</span></li>
           <li>"You don't find the happy life, you make it."</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="header-wrapper articles">
+      <div class="header">
+
+        <h3>Articles</h3>
+
+        <ul class="overview">
+          {% for article in site.articles %}
+            <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+          {% endfor %}
         </ul>
 
       </div>

@@ -1,5 +1,4 @@
 let items = [];
-const ZERO_WIDTH_SPACE = '&#8203;';
 
 function initalise() {
 
@@ -12,7 +11,7 @@ function initalise() {
       if (w.trim() === '') { return; }
       html += '<span class="tag">'
         + w.trim().toLowerCase()
-        + ZERO_WIDTH_SPACE  // prevent double-click selection from spilling into adjacent span
+        + '&ZeroWidthSpace;'  // prevent double-click selection from spilling into adjacent span
         + '</span>';
     });
     e.innerHTML = html;

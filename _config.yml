@@ -20,3 +20,11 @@ collections:
 timezone: 'Australia/Melbourne'
 
 encoding: 'utf-8'
+
+# Exclude these files from your production _site
+exclude:
+    - Gemfile
+    - README.md
+    - LICENSE.md
+    - TODO.md
+    - CNAME

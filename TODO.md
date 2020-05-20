@@ -1,6 +1,5 @@
 ### TODO:
-- Add avatar image.
-- Publish a few articles.
+- Publish articles.
 
 ##### Notes:
 - example: http://www.grokcode.com/programmer-portfolio/

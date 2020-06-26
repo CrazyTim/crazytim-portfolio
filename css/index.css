@@ -129,8 +129,6 @@ li {
 }
 
 section.portfolio {
-	max-width: 875px;
-	margin: 0 auto;
 	display: grid;
 	row-gap: 20px;
   padding-top: 0px;
@@ -172,6 +170,7 @@ section.title {
 section .content-wrapper {
   padding: 0px 50px 30px;
   max-width: 875px;
+  width: 100%;
   margin: 0 auto;
   font-weight: 100;
   font-size: 17px;

@@ -23,7 +23,7 @@ function initalise() {
   });
 
   const searchBox = document.querySelector('.search input');
-  const searchBoxClearButton = document.querySelector('.search .btn-clear');
+  const searchBoxClearButton = document.querySelector('.search .button-clear');
 
   searchBox.oninput = () => {
     search(searchBox.value.toLowerCase());

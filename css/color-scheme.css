@@ -17,11 +17,11 @@
 
     --search-border-color: #969694;
 
-    --btn-color: #b93924;
-    --btn-border-color: #b93924;
+    --button-color: #b93924;
+    --button-border-color: #b93924;
   }
 
-  a.demo.code{
+  a.button.code{
     background-image: url(../img/icon-code-light.svg);
   }
 
@@ -46,11 +46,11 @@
 
     --search-border-color: #d8d8d8;
 
-    --btn-color: #d46f5f;
-    --btn-border-color: #d46f5f;
+    --button-color: #d46f5f;
+    --button-border-color: #d46f5f;
   }
 
-  a.demo.code{
+  a.button.code{
     background-image: url(../img/icon-code-dark.svg);
   }
 

@@ -88,7 +88,7 @@ ul {
     width: 100%;
   }
 
-  .search .btn-clear {
+  .search .button-clear {
     display: none;
     justify-content: center;
     align-items: center;
@@ -97,11 +97,11 @@ ul {
     user-select: none;
   }
 
-  .search .btn-clear svg {
+  .search .button-clear svg {
     width:12px;
   }
 
-  .search.found .btn-clear {
+  .search.found .button-clear {
     display: flex;
   }
 
@@ -293,9 +293,9 @@ h4 {
     margin: 0 0 8px 0;
   }
 
-  .item .content a.demo {
-    color: var(--btn-color);
-    border: solid 1px var(--btn-border-color);
+  .item .content a.button {
+    color: var(--button-color);
+    border: solid 1px var(--button-border-color);
     border-radius: 3px;
     padding: 4px 10px 5px;
     display: inline-block;
@@ -305,11 +305,11 @@ h4 {
     font-size: 14px;
   }
 
-  .item .content a.demo:hover {
+  .item .content a.button:hover {
     background-color: var(--button-background-color-hover);
   }
 
-  .item .content a.demo.code{
+  .item .content a.button.code{
     background-position: 10px center;
     background-repeat: no-repeat;
     padding-left: 28px;

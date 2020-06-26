@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+@import url("color-scheme.css");
 
 * {
 	box-sizing: border-box;
@@ -7,6 +8,12 @@
 
 body {
   overflow-y: scroll;
+  background-color: var(--body-background-color);
+  color: var(--color);
+}
+
+input {
+  color: var(--color);
 }
 
 html, body {
@@ -46,7 +53,7 @@ ul {
 
   .search-wrapper .result {
     padding: 9px;
-    background-color: #1a80a7;
+    background-color: var(--tag-match-background-color);
     color: white;
     border-radius: 3px;
     padding: 3px 5px 4px 5px;
@@ -59,7 +66,7 @@ ul {
     grid-template-columns: auto;
     font-size: 15px;
     width: 250px;
-    border: solid 1px #969694;
+    border: solid 1px var(--search-border-color);
     border-radius: 4px;
     overflow: hidden;
     background-image: url('../img/search.svg');
@@ -108,7 +115,7 @@ code {
 
 li::before {
   content: "•";
-  color: #d46f5f;
+  color: var(--link-color);
   font-size: 130%;
   vertical-align: middle;
   font-weight: bold;
@@ -130,7 +137,7 @@ section.portfolio {
 }
 
 a, a:visited {
-  color: #b93924;
+  color: var(--link-color);
   transition: background-color .2s, color .2s;
   text-decoration: none;
 }
@@ -143,7 +150,6 @@ section.title {
   color: white;
   padding-top: 40px;
   margin-bottom: 40px;
-
   background-image: url('../img/header.jpg');
   background-size: cover;
   background-position-y: center;
@@ -207,6 +213,7 @@ section .links {
   section .links a span {
     font-size: 14px;
     text-decoration: none;
+    color: #000;
   }
 
   section .links a:hover {
@@ -236,7 +243,7 @@ h3 {
   font-size: 22px;
  	font-weight: 400;
   margin: 0 0 15px 0;
-  color: #353535;
+  color: var(--h3-color);
 }
 
 h4 {
@@ -251,24 +258,24 @@ h4 {
   overflow: hidden;
   padding-bottom: 30px;
   padding-top: 20px;
-  border-top: 1px solid #c523005e;
+  border-top: 1px solid var(--item-divider-color);
   font-size: 15px;
 }
 
 .item .tag {
   font-size: 13px;
   font-weight: normal;
-  color: #484848;
+  color: var(--tag-color);
   padding: 3px 5px 4px 5px;
   border-radius: 3px;
-  background-color: #72aec84a; /* #e8e8e8; */
+  background-color: var(--tag-background-color);
   margin: 0px 4px 4px 0;
   white-space: nowrap;
   display: inline-block;
 }
 
   .item .tag.found {
-    background-color: #1a80a7; /* #c3e2f3; */
+    background-color: var(--tag-match-background-color);
     color: white;
   }
 
@@ -288,7 +295,8 @@ h4 {
   }
 
   .item .content a.demo {
-    border: solid 1px #b93924;
+    color: var(--btn-color);
+    border: solid 1px var(--btn-border-color);
     border-radius: 3px;
     padding: 4px 10px 5px;
     display: inline-block;
@@ -299,11 +307,10 @@ h4 {
   }
 
   .item .content a.demo:hover {
-    background-color: #fbece9;
+    background-color: var(--button-background-color-hover);
   }
 
   .item .content a.demo.code{
-    background-image: url(../img/icon-code.svg);
     background-position: 10px center;
     background-repeat: no-repeat;
     padding-left: 28px;
@@ -341,6 +348,7 @@ h4 {
   overflow: hidden;
   box-shadow: 7px 11px 9px -7px rgba(39, 0, 0, 0.3);
   max-height: 212px;
+  border: solid 1px var(--item-divider-color);
   border-radius: 4px;
 }
 
@@ -402,7 +410,6 @@ h4 {
 	.item .img {
 		grid-row: 1;
 		margin-bottom: 24px;
-		border: solid 1px #d6d6d6;
 		max-height: 150px;
 		max-width: 370px;
 		width: calc(100% - 15px); /* ensure shadow isn't cut off */

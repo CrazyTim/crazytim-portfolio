@@ -80,7 +80,7 @@ ul {
   grid-template-columns: auto auto;
 }
 
-  .search div input {
+  .search input {
     border: 0px;
     padding: 8px 8px 9px 28px;
     background-color: transparent;

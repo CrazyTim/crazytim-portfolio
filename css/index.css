@@ -254,7 +254,6 @@ h4 {
   grid-template-columns: 320px auto;
   grid-template-rows: auto;
   column-gap: 20px;
-  overflow: hidden;
   padding-bottom: 30px;
   padding-top: 20px;
   border-top: 1px solid var(--item-divider-color);
@@ -411,7 +410,6 @@ h4 {
 		margin-bottom: 24px;
 		max-height: 150px;
 		max-width: 370px;
-		width: calc(100% - 15px); /* ensure shadow isn't cut off */
   }
 
   .item .content {

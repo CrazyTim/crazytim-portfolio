@@ -18,8 +18,8 @@ function initalise() {
   });
 
   // ensure all links open in a new tab
-  document.querySelectorAll("a").forEach( (e) => {
-    e.getAttribute("href") && e.hostname !== location.hostname && (e.target = "_blank");
+  document.querySelectorAll('a').forEach( (e) => {
+    e.getAttribute('href') && e.hostname !== location.hostname && (e.target = '_blank') && (e.rel = 'noopener');
   });
 
   const searchBox = document.querySelector('.search input');

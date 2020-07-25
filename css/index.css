@@ -186,7 +186,9 @@ section .links {
 }
 
   section .links a {
-  	white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
     text-decoration: none;
     padding: 6px 10px 7px;
     fill: #000;
@@ -194,17 +196,13 @@ section .links {
     transition: background-color .2s;
     border-radius: 3px;
     background-color: white;
-    margin: 3px;
-    display: inline-block;
-    line-height: 14px;
+    margin: 4px;
     font-weight: normal;
-    border: solid 1px #8e8e8e;
   }
 
   section .links a svg {
-    height: 18px;
-    width: 18px;
-    vertical-align: middle;
+    height: 20px;
+    width: 20px;
     padding-right: 8px;
     box-sizing: content-box;
   }

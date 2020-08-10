@@ -1,24 +1,31 @@
+body  {
+  --item-title-font-size: 17px;
+  --item-font-size: 14px;
+}
+
 @media (prefers-color-scheme: light) {
 
   body  {
     --body-background-color: #fff;
-    --item-divider-color: #bfbfbf;
     --color: #000;
+
+    --item-divider-color: #bfbfbf;
+    --item-description-color: #222;
 
     --tag-background-color: #d6e7ef;
     --tag-color: #484848;
-    --tag-match-background-color: #1a80a7;
-
-    --button-background-color-hover: #fbece9;
+    --tag-match-background-color: #ffb961;
 
     --h3-color: #000;
 
-    --link-color: #b93924;
+    --link-color: #0041b5;
 
-    --search-border-color: #969694;
+    --search-border-color: #696969;
 
-    --button-color: #b93924;
-    --button-border-color: #b93924;
+    --button-color: #fff;
+    --button-background-color: #4469ab;
+    --button2-color: #696969;
+    --button2-border-color: #696969;
   }
 
   a.button.code{
@@ -31,23 +38,25 @@
 
   body  {
     --body-background-color: #252525;
-    --item-divider-color: #696969;
     --color: #fff;
 
-    --tag-background-color: #435c67;
-    --tag-color: #dcddde;
-    --tag-match-background-color: #9c3a51;
+    --item-divider-color: #505050;
+    --item-description-color: #bdbdbd;
 
-    --button-background-color-hover: #2d0701;
+    --tag-background-color: #3c454c;
+    --tag-color: #dcddde;
+    --tag-match-background-color: #bd405e;
 
     --h3-color: #fff;
 
-    --link-color: #d46f5f;
+    --link-color: #89b2fb;
 
-    --search-border-color: #d8d8d8;
+    --search-border-color: #bdbdbd;
 
-    --button-color: #d46f5f;
-    --button-border-color: #d46f5f;
+    --button-color: #fff;
+    --button-background-color: #4469ab;
+    --button2-color: #bdbdbd;
+    --button2-border-color: #bdbdbd;
   }
 
   a.button.code{

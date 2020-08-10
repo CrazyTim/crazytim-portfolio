@@ -18,7 +18,6 @@ input {
 
 html, body {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 15px;
 	margin: 0;
 	padding: 0;
 	min-width: 280px;
@@ -54,7 +53,6 @@ ul {
   .search-wrapper .result {
     padding: 9px;
     background-color: var(--tag-match-background-color);
-    color: white;
     border-radius: 3px;
     padding: 3px 5px 4px 5px;
     width: 250px;
@@ -115,7 +113,7 @@ code {
 
 li::before {
   content: "•";
-  color: var(--link-color);
+  color: var(--button-background-color);
   font-size: 130%;
   vertical-align: middle;
   font-weight: bold;
@@ -137,7 +135,6 @@ section.portfolio {
 a, a:visited {
   color: var(--link-color);
   transition: background-color .2s, color .2s;
-  text-decoration: none;
 }
 
 section.articles {
@@ -183,7 +180,7 @@ section ul {
 }
 
 section .links {
-  margin: 15px 0 10px 0;
+  margin: 30px 0 10px 0;
 }
 
   section .links a {
@@ -228,9 +225,9 @@ h1 {
 }
 
 h2 {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 400;
-  margin: 0 0 8px 0;
+  margin: 0 0 3px 0;
 }
 
 .no-line-break {
@@ -256,7 +253,7 @@ h4 {
   padding-bottom: 30px;
   padding-top: 20px;
   border-top: 1px solid var(--item-divider-color);
-  font-size: 15px;
+  font-size: var(--item-font-size);
 }
 
 .item .tag {
@@ -272,12 +269,11 @@ h4 {
 }
 
   .item .tag.found {
-    background-color: var(--tag-match-background-color);
-    color: white;
+    box-shadow: inset 0 -10px 0px -7px var(--tag-match-background-color);
   }
 
 .item .title {
-  font-size: 17px;
+  font-size: var(--item-title-font-size);
   font-weight: 600;
   margin-top: -3px;
   padding: 0 0 5px 0;
@@ -293,7 +289,8 @@ h4 {
 
   .item .content a.button {
     color: var(--button-color);
-    border: solid 1px var(--button-border-color);
+    border: solid 1px var(--button-background-color);
+    background-color: var(--button-background-color);
     border-radius: 3px;
     padding: 4px 10px 5px;
     display: inline-block;
@@ -301,20 +298,20 @@ h4 {
     width: max-content;
     transition: background-color .2s, color .2s;
     font-size: 14px;
-  }
-
-  .item .content a.button:hover {
-    background-color: var(--button-background-color-hover);
+    text-decoration: none;
   }
 
   .item .content a.button.code{
+    color: var(--button2-color);
+    border-color: var(--button2-border-color);
+    background-color: transparent;
     background-position: 10px center;
     background-repeat: no-repeat;
     padding-left: 28px;
   }
 
 .item .description {
-  font-size: 15px;
+  color: var(--item-description-color);
   font-weight: 100;
   margin: 0 0 16px 0;
 }
@@ -345,7 +342,6 @@ h4 {
   overflow: hidden;
   box-shadow: 7px 11px 9px -7px rgba(39, 0, 0, 0.3);
   max-height: 212px;
-  border: solid 1px var(--item-divider-color);
   border-radius: 4px;
 }
 
@@ -395,10 +391,6 @@ h4 {
 		grid-template-columns: auto;
 		padding-bottom: 40px;
 	}
-
-  .item .title {
-    font-size: 19px;
-  }
 
   .item:last-of-type {
     padding-bottom: 0;

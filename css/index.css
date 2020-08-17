@@ -141,7 +141,7 @@ section.articles {
   display: none;
 }
 
-section.title {
+section.header {
   color: white;
   padding-top: 40px;
   margin-bottom: 40px;
@@ -230,10 +230,6 @@ h2 {
   margin: 0 0 3px 0;
 }
 
-.no-line-break {
-  white-space: nowrap;
-}
-
 h3 {
   font-size: 22px;
  	font-weight: 400;
@@ -241,11 +237,11 @@ h3 {
   color: var(--h3-color);
 }
 
-h4 {
-  margin: 0 0 10px;
+.no-line-break {
+  white-space: nowrap;
 }
 
-.item {
+article {
   display: grid;
   grid-template-columns: 320px auto;
   grid-template-rows: auto;
@@ -256,38 +252,38 @@ h4 {
   font-size: var(--item-font-size);
 }
 
-.item .tag {
-  font-size: 13px;
-  font-weight: normal;
-  color: var(--tag-color);
-  padding: 3px 5px 4px 5px;
-  border-radius: 3px;
-  background-color: var(--tag-background-color);
-  margin: 0px 4px 4px 0;
-  white-space: nowrap;
-  display: inline-block;
-}
+  article .tag {
+    font-size: 13px;
+    font-weight: normal;
+    color: var(--tag-color);
+    padding: 3px 5px 4px 5px;
+    border-radius: 3px;
+    background-color: var(--tag-background-color);
+    margin: 0px 4px 4px 0;
+    white-space: nowrap;
+    display: inline-block;
+  }
 
-  .item .tag.found {
+  article .tag.found {
     box-shadow: inset 0 -10px 0px -7px var(--tag-match-background-color);
   }
 
-.item .title {
-  font-size: var(--item-title-font-size);
-  font-weight: 600;
-  margin-top: -3px;
-  padding: 0 0 5px 0;
-}
+  article h4 {
+    font-size: var(--item-heading-font-size);
+    font-weight: 600;
+    margin: -3px 0 0 0;
+    padding: 0 0 5px 0;
+  }
 
-.item .content {
-  margin: 16px 0 0 0;
-}
+  article .content {
+    margin: 16px 0 0 0;
+  }
 
-  .item .content p {
+  article .content p {
     margin: 0 0 8px 0;
   }
 
-  .item .content a.button {
+  article .content a.button {
     color: var(--button-color);
     border: solid 1px var(--button-background-color);
     background-color: var(--button-background-color);
@@ -301,7 +297,7 @@ h4 {
     text-decoration: none;
   }
 
-  .item .content a.button.code{
+  article .content a.button.code{
     color: var(--button2-color);
     border-color: var(--button2-border-color);
     background-color: transparent;
@@ -310,55 +306,55 @@ h4 {
     padding-left: 28px;
   }
 
-.item .description {
-  color: var(--item-description-color);
-  font-weight: 100;
-  margin: 0 0 16px 0;
-}
+  article .description {
+    color: var(--item-description-color);
+    font-weight: 100;
+    margin: 0 0 16px 0;
+  }
 
-.item .install {
-  margin: 0 0 5px 0;
-}
+  article .install {
+    margin: 0 0 5px 0;
+  }
 
-.item .install::before {
-  margin: 0 10px 0 0;
-  display: inline-block;
-  content: "Install: ";
-  font-weight: 600;
-}
+  article .install::before {
+    margin: 0 10px 0 0;
+    display: inline-block;
+    content: "Install: ";
+    font-weight: 600;
+  }
 
-.item .issues::before {
-  margin: 0 10px 0 0;
-  display: inline-block;
-  content: "Issues: ";
-  font-weight: 600;
-}
+  article .issues::before {
+    margin: 0 10px 0 0;
+    display: inline-block;
+    content: "Issues: ";
+    font-weight: 600;
+  }
 
-.item .img {
-  grid-column: 1;
-  grid-row: span 4;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  box-shadow: 7px 11px 9px -7px rgba(39, 0, 0, 0.3);
-  max-height: 212px;
-  border-radius: 4px;
-}
+  article .img {
+    grid-column: 1;
+    grid-row: span 4;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 7px 11px 9px -7px rgba(39, 0, 0, 0.3);
+    max-height: 212px;
+    border-radius: 4px;
+  }
 
-.item .img img {
-  width: auto;
-  max-height: 213px;
-}
+  article .img img {
+    width: auto;
+    max-height: 213px;
+  }
 
 
 @media only screen and (max-width: 900px) {
 
-	.item {
+	article {
 		grid-template-columns: 260px auto;
 	}
 
-  .item .img,
-  .item .img img {
+  article .img,
+  article .img img {
   	max-height: 173px;
   }
 
@@ -387,27 +383,27 @@ h4 {
     padding-right: 20px;
   }
 
-	.item {
+	article {
 		grid-template-columns: auto;
 		padding-bottom: 40px;
 	}
 
-  .item:last-of-type {
+  article:last-of-type {
     padding-bottom: 0;
   }
 
-	.item .img {
+	article .img {
 		grid-row: 1;
 		margin-bottom: 24px;
 		max-height: 150px;
 		max-width: 370px;
   }
 
-  .item .content {
+  article .content {
 		grid-column: 1;
   }
 
-  .item .img img {
+  article .img img {
  		max-height: unset;
     width: 100%;
 	}

@@ -193,10 +193,9 @@ section .links {
     color: #000;
     transition: background-color .2s;
     border-radius: 3px;
-    background-color: white;
+    background-color: #fff;
     margin: 4px;
     font-weight: normal;
-    border: 1px solid #797979;
   }
 
   section .links a svg {
@@ -209,7 +208,6 @@ section .links {
   section .links a span {
     font-size: 14px;
     text-decoration: none;
-    color: #000;
   }
 
   section .links a:hover {

@@ -20,7 +20,7 @@ body  {
 
     --link-color: #0041b5;
 
-    --search-border-color: #696969;
+    --filter-border-color: #696969;
 
     --button-color: #fff;
     --button-background-color: #4469ab;
@@ -51,7 +51,7 @@ body  {
 
     --link-color: #89b2fb;
 
-    --search-border-color: #bdbdbd;
+    --filter-border-color: #bdbdbd;
 
     --button-color: #fff;
     --button-background-color: #4469ab;

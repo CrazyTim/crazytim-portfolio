@@ -1,93 +1,95 @@
-let items = [];
+let articles;
+
+window.addEventListener('DOMContentLoaded', () => initalise() );
 
 function initalise() {
 
-  items = document.querySelectorAll('.item');
+  articles = document.querySelectorAll('article');
 
-  // create tags dynamically
-  document.querySelectorAll('.tags').forEach( (e) => {
+  // Build tags:
+  // Tags are written in plain text for convenience.
+  // Convert them to DOM elements so they can be styled.
+  document.querySelectorAll('.tags').forEach(e => {
     let html = '';
-    e.innerHTML.split(",").forEach( (w) => {
+    e.innerHTML.split(",").forEach(w => {
       if (w.trim() === '') { return; }
       html += '<span class="tag">'
         + w.trim().toLowerCase()
-        + '&ZeroWidthSpace;'  // prevent double-click selection from spilling into adjacent span
+        + '&ZeroWidthSpace;'  // Prevent double-click selection from spilling into adjacent span.
         + '</span>';
     });
     e.innerHTML = html;
   });
 
-  // ensure all links open in a new tab
-  document.querySelectorAll('a').forEach( (e) => {
+  // Ensure all links open in a new tab:
+  document.querySelectorAll('a').forEach(e => {
     e.getAttribute('href') && e.hostname !== location.hostname && (e.target = '_blank') && (e.rel = 'noopener');
   });
 
-  const searchBox = document.querySelector('.search input');
-  const searchBoxClearButton = document.querySelector('.search .button-clear');
+  // Define event listners...
 
-  searchBox.oninput = () => {
-    search(searchBox.value.toLowerCase());
+  const filterBox = document.querySelector('.filter input');
+  const filterBoxClearButton = document.querySelector('.filter .button-clear');
+
+  filterBox.oninput = () => {
+    filter(filterBox.value.toLowerCase());
   };
 
-  searchBoxClearButton.onclick = () => {
-    searchBox.value = '';
-    search('');
+  filterBoxClearButton.onclick = () => {
+    filterBox.value = '';
+    filter('');
   };
 
 }
 
-function search(searchText) {
+/**
+ * Highlight tags that match `filterText` and hide articles that don't have matching tags.
+ */
+function filter(filterText) {
 
-  const searchWrapper = document.querySelector('.search');
-  const found = findItemsWithTag(searchText);
+  const filterWrapper = document.querySelector('.filter');
+  const filterResult = document.querySelector('.filter-wrapper .result');
 
-  for (let i=0; i<items.length; i++) {
-    const item = items[i];
-    if (found.includes(item)) {
-      item.classList.remove('hidden');
-    } else {
-      item.classList.add('hidden');
-    }
-  }
-
-  const searchResult = document.querySelector('.search-wrapper .result')
-
-  if (found.length == items.length) {
-
-    searchWrapper.classList.remove('found');
-    searchResult.classList.add('hidden');
-
-  } else {
-
-    searchWrapper.classList.add('found');
-    searchResult.classList.remove('hidden');
-
-    let m = 'Matches';
-    if (found.length == 1) { m = 'Match'; }
-    searchResult.textContent = found.length + ' ' + m;
-
-  }
-
-}
-
-// find items with matching tags
-function findItemsWithTag(s) {
-  const found = new Set();
-  for (let i=0; i<items.length; i++) {
-    const tags = items[i].querySelectorAll('.tag');
-    for (let j=0; j<tags.length; j++) {
-      if (tags[j].textContent.includes(s)) {
-        if (s !== '') {
-          tags[j].classList.add('found');
+  // Find matching tags and visually highlight them.
+  // Build a list of the matching articles.
+  let found;
+  {
+    const f = new Set();
+    for (let i = 0; i < articles.length; i++) {
+      const tags = articles[i].querySelectorAll('.tag');
+      for (let j = 0; j < tags.length; j++) {
+        if (tags[j].textContent.includes(filterText)) {
+          if (filterText !== '') {
+            tags[j].classList.add('found');
+          } else {
+            tags[j].classList.remove('found');
+          }
+          f.add(articles[i]);
         } else {
           tags[j].classList.remove('found');
         }
-        found.add(items[i]);
-      } else {
-        tags[j].classList.remove('found');
       }
+    }
+    found = Array.from(f);
+  }
 
+  // Show found articles, hide the rest:
+  for (let i = 0; i < articles.length; i++) {
+    if (found.includes(articles[i])) {
+      articles[i].classList.remove('hidden');
+    } else {
+      articles[i].classList.add('hidden');
     }
   }
-  return Array.from(found);
+
+  // Display the number of found articles:
+  if (found.length === articles.length) {
+    filterWrapper.classList.remove('found');
+    filterResult.classList.add('hidden');
+  } else {
+    filterWrapper.classList.add('found');
+    filterResult.classList.remove('hidden');
+    filterResult.textContent = found.length + ' ' + (found.length === 1 ? 'Match' : 'Matches');
+  }
+
 }

@@ -10,7 +10,6 @@ function initalise() {
   // Build tags:
   // Tags are written in plain text for convenience.
   // Convert them to DOM elements so they can be styled.
-  const uniqueTags = new Set();
   document.querySelectorAll('.tags').forEach(e => {
     let html = '';
     e.innerHTML.split(",").forEach(w => {
@@ -19,11 +18,19 @@ function initalise() {
         + w.trim().toLowerCase()
         + '&ZeroWidthSpace;'  // Prevent double-click selection from spilling into adjacent span.
         + '</span>';
-      uniqueTags.add(w);
+
+      if (uniqueTags[t] === undefined) {
+        tags.add({
+          label: w,
+          count: 1,
+        });
+      } else {
+        tags[t].count++
+      }
+
     });
     e.innerHTML = html;
   });
-  tags = Array.from(uniqueTags);
 
   // Ensure all links open in a new tab:
   document.querySelectorAll('a').forEach(e => {

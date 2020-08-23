@@ -1,0 +1,20 @@
+.tagify__dropdown {
+ background-color: black;
+}
+
+.filter-dropdown .tagify__dropdown__item{
+
+}
+
+.filter-dropdown .tagify__dropdown__item--active{
+
+}
+
+.filter-dropdown .tagify__dropdown__item:hover{
+  background: lightyellow;
+  border-color: gold;
+}
+
+.tagify {
+  flex-wrap: nowrap;
+}

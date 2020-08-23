@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="email.svg"
+   id="svg26"
+   version="1.1"
+   viewBox="0 0 28 28"
+   height="16"
+   width="14">
+  <metadata
+     id="metadata32">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs30" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg26"
+     inkscape:window-maximized="0"
+     inkscape:window-y="50"
+     inkscape:window-x="288"
+     inkscape:cy="8.1119569"
+     inkscape:cx="10.526629"
+     inkscape:zoom="45.254834"
+     showgrid="false"
+     id="namedview28"
+     inkscape:window-height="1028"
+     inkscape:window-width="1313"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <title
+     id="title22">Icon: Email</title>
+  <path
+     sodipodi:nodetypes="ccccccccc"
+     d="M 0.93749994,7.8742815 1.0234356,10.057883 13.57808,18.989016 c 0.278967,0.269236 0.72103,0.269236 0.999997,0 L 26.99991,10.026632 26.94159,8.0305495 14.16011,17.418695 h -0.16016 z"
+     style="opacity:1;stroke-width:0.999998"
+     id="path24" />
+  <path
+     sodipodi:nodetypes="cccccccccccccccccc"
+     d="M 2.3710938,4.9620003 C 1.0613258,4.9613923 -6.04e-4,6.0233259 0,7.3330939 V 22.670281 c -6.04e-4,1.309768 1.0613238,2.371698 2.3710938,2.371094 H 25.628906 C 26.938674,25.041983 28.000604,23.980049 28,22.670281 V 7.3330939 C 28.000604,6.0233259 26.938676,4.9613963 25.628906,4.9620003 Z M 2.7109376,6.4112191 H 25.320312 c 0.865878,0.01412 1.21993,0.4560206 1.210938,1.2617186 V 22.299187 c 0.0048,0.860236 -0.413566,1.286896 -1.242188,1.29297 H 2.6796876 C 1.8138095,23.578027 1.459758,23.136135 1.46875,22.330437 V 7.7041877 C 1.46395,6.8439517 1.8823155,6.4172929 2.7109376,6.4112191 Z"
+     style="opacity:1;stroke-width:1"
+     id="path24-5" />
+</svg>

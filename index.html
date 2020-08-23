@@ -13,11 +13,17 @@ title: 'CrazyTim - Software Developer / Designer'
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <base target="_blank">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
 
     <script defer src="js/index.js"></script>
 
-  </head>
+    <!-- Tagify plugin -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.17.7/tagify.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.17.7/tagify.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/tagify-custom.css">
+
+ </head>
 
   <body>
 
@@ -96,13 +102,7 @@ title: 'CrazyTim - Software Developer / Designer'
         <h3>Portfolio</h3>
 
         <div class="filter-wrapper">
-          <div class="filter">
-            <input type="text" placeholder="Filter tags..." autocapitalize="none"></input>
-            <div class="button-clear">
-              <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><path transform="translate(-8,-8)" fill="#9c9c9c" d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg>
-            </div>
-          </div>
-          <div class="result hidden">Nothing found.</div>
+          <input class="filter" type="text" placeholder="Filter tags..." autocapitalize="none"></input>
         </div>
 
         <article>
@@ -116,6 +116,22 @@ title: 'CrazyTim - Software Developer / Designer'
             <div class="content">
               <p>I created and designed a desktop application (back and front-end) that helped the startup company prepare and schedule work. This was a low-budget project and I had ownership until the company decided to invest in a different platform.</p>
               <p>I managed complexity and ensured excellent performance and up-time for 60+ daily users across most departments, including operations, sales, drafters, factory, accounts, and management. I liaised with stakeholders to scope and build new features, coordinated version releases, integrated with other systems (including GPS and SMS), performed maintenance and bug fixes, etc.</p>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div class="img">
+            <img alt="thumbnail" loading="lazy" src="img/item-img-13.jpg"/>
+          </div>
+          <div>
+            <h4>Client Portal - Buildsafe Australia</h4>
+            <div class="description">Scheduling app (2020)</div>
+            <div class="tags">vb.net,c#,winforms,ms-sql,javascript,html,css,json,php,filemaker,google-directions-api,ui-design,dev-ops</div>
+            <div class="content">
+              <p>I created and designed a desktop application (back and front-end) that helped the startup company prepare and schedule work. This was a low-budget project and I had ownership until the company decided to invest in a different platform.</p>
+              <p>JSON. Simple session management using url tokens. Simple authentication using username/password. Fast full-text search based on address, supervisor. Pagination. Data synced into SQL Server  based on date modified.
+</p>
             </div>
           </div>
         </article>

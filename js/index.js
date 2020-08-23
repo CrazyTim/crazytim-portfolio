@@ -1,4 +1,5 @@
 let articles;
+let tags;
 
 window.addEventListener('DOMContentLoaded', () => initalise() );
 
@@ -9,6 +10,7 @@ function initalise() {
   // Build tags:
   // Tags are written in plain text for convenience.
   // Convert them to DOM elements so they can be styled.
+  const uniqueTags = new Set();
   document.querySelectorAll('.tags').forEach(e => {
     let html = '';
     e.innerHTML.split(",").forEach(w => {
@@ -17,9 +19,11 @@ function initalise() {
         + w.trim().toLowerCase()
         + '&ZeroWidthSpace;'  // Prevent double-click selection from spilling into adjacent span.
         + '</span>';
+      uniqueTags.add(w);
     });
     e.innerHTML = html;
   });
+  tags = Array.from(uniqueTags);
 
   // Ensure all links open in a new tab:
   document.querySelectorAll('a').forEach(e => {
@@ -31,14 +35,16 @@ function initalise() {
   const filterBox = document.querySelector('.filter input');
   const filterBoxClearButton = document.querySelector('.filter .button-clear');
 
-  filterBox.oninput = () => {
-    filter(filterBox.value.toLowerCase());
-  };
+  // filterBox.oninput = () => {
+  //   filter(filterBox.value.toLowerCase());
+  // };
 
-  filterBoxClearButton.onclick = () => {
-    filterBox.value = '';
-    filter('');
-  };
+  // filterBoxClearButton.onclick = () => {
+  //   filterBox.value = '';
+  //   filter('');
+  // };
+
+  initaliseTagify();
 
 }
 
@@ -91,5 +97,31 @@ function filter(filterText) {
     filterResult.classList.remove('hidden');
     filterResult.textContent = found.length + ' ' + (found.length === 1 ? 'Match' : 'Matches');
   }
+
+}
+
+function initaliseTagify() {
+
+  tagify = new Tagify( document.querySelector('.filter'), {
+    whitelist: tags,
+    enforceWhitelist : true, // Only allow tags that are in the whitelist.
+    maxTags: 10,
+    editTags: 1, // Allow user to edit the tags by double clicking them.
+    delimiters: null, // Don't create a tag when user types a comma.
+    dropdown: { // Suggestions dropdown
+      position: 'text',      // Position dropdown list next to typed text.
+      maxItems: 20,           // <- mixumum allowed rendered suggestions
+      classname: 'dropdown', // Custom classname for this dropdown, so it could be targeted
+      enabled: 0,             // Always open dropdown when input gets focus.
+      closeOnSelect: false,    // Do not hide the dropdown after an item has been selected.
+      maxItems: 5,
+    },
+    placeholder: 'Type something',
+    templates: {
+        dropdownItemNoMatch: function(data) {
+            return `No tags match '${data.value}'`;
+        }
+    },
+  })
 
 }

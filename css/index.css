@@ -50,23 +50,23 @@ ul {
   box-shadow: 7px 11px 15px -7px rgba(39, 0, 0, 0.3); */
 }
 
-  .filter-wrapper .result {
+  /* .filter-wrapper .result {
     padding: 9px;
     background-color: var(--tag-match-background-color);
     border-radius: 3px;
     padding: 3px 5px 4px 5px;
     width: 250px;
     margin-top: 4px;
-  }
+  } */
 
   .filter-wrapper .filter {
-    display: grid;
+    /* display: grid;
     grid-template-columns: auto;
     font-size: 15px;
     width: 250px;
     border: solid 1px var(--filter-border-color);
     border-radius: 4px;
-    overflow: hidden;
+    overflow: hidden; */
     background-image: url('../img/search.svg');
     background-repeat: no-repeat;
     background-size: 22px 22px;
@@ -74,7 +74,7 @@ ul {
     box-shadow: inset 0px 3px 7px -8px #000000;
   }
 
-  .filter.found {
+  /* .filter.found {
     grid-template-columns: auto auto;
   }
 
@@ -101,7 +101,7 @@ ul {
 
   .filter .button-clear svg {
     width:12px;
-  }
+  } */
 
 code {
   font-family: monospace;

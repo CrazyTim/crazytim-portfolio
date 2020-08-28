@@ -12,6 +12,10 @@ body {
   color: var(--color);
 }
 
+a svg {
+  margin-right: 6px;
+}
+
 input {
   color: var(--color);
 }
@@ -60,31 +64,25 @@ ul {
   }
 
   .filter-wrapper .filter {
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
+    align-items: stretch;
     font-size: 15px;
     width: 250px;
     border: solid 1px var(--filter-border-color);
     border-radius: 4px;
     overflow: hidden;
-    background-image: url('../img/search.svg');
-    background-repeat: no-repeat;
-    background-size: 22px 22px;
-    background-position: 3px center;
     box-shadow: inset 0px 3px 7px -8px #000000;
   }
 
-  .filter.found {
-    grid-template-columns: auto auto;
-  }
-
-  .filter.found .button-clear {
+  .filter .icon-filter {
     display: flex;
+    align-items: center;
+    padding: 0 6px;
   }
 
   .filter input {
     border: 0px;
-    padding: 8px 8px 9px 28px;
+    padding: 8px 8px 9px 0;
     background-color: transparent;
     font-size: 15px;
     width: 100%;
@@ -92,15 +90,13 @@ ul {
 
   .filter .button-clear {
     display: none;
-    justify-content: center;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 var(--button-padding-vertical);
     cursor: pointer;
-    user-select: none;
   }
 
-  .filter .button-clear svg {
-    width:12px;
+  .filter.found .button-clear {
+    display: flex;
   }
 
 code {
@@ -150,6 +146,29 @@ section.header {
   background-position-y: center;
 }
 
+  section.header .links {
+    margin: 30px 0 10px 0;
+  }
+
+  section.header .links a {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 6px var(--button-padding-vertical) 7px;
+    color: #252525;
+    transition: background-color .2s;
+    border-radius: 3px;
+    background-color: #fff;
+    margin: 4px;
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  section.header .links a:hover {
+    background-color: #fff;
+  }
+
 .avatar {
   width: 120px;
   height: 120px;
@@ -178,41 +197,6 @@ section .content-wrapper {
 section ul {
   margin: 15px 0 20px 0;
 }
-
-section .links {
-  margin: 30px 0 10px 0;
-}
-
-  section .links a {
-    display: inline-flex;
-    align-items: center;
-    white-space: nowrap;
-    text-decoration: none;
-    padding: 6px 10px 7px;
-    fill: #000;
-    color: #000;
-    transition: background-color .2s;
-    border-radius: 3px;
-    background-color: #fff;
-    margin: 4px;
-    font-weight: normal;
-  }
-
-  section .links a svg {
-    height: 20px;
-    width: 20px;
-    padding-right: 8px;
-    box-sizing: content-box;
-  }
-
-  section .links a span {
-    font-size: 14px;
-    text-decoration: none;
-  }
-
-  section .links a:hover {
-    background-color: #fff;
-  }
 
 h1 {
   font-size: 32px;
@@ -250,22 +234,6 @@ article {
   font-size: var(--item-font-size);
 }
 
-  article .tag {
-    font-size: 13px;
-    font-weight: normal;
-    color: var(--tag-color);
-    padding: 3px 5px 4px 5px;
-    border-radius: 3px;
-    background-color: var(--tag-background-color);
-    margin: 0px 4px 4px 0;
-    white-space: nowrap;
-    display: inline-block;
-  }
-
-  article .tag.found {
-    box-shadow: inset 0 -10px 0px -7px var(--tag-match-background-color);
-  }
-
   article h4 {
     font-size: var(--item-heading-font-size);
     font-weight: 600;
@@ -273,60 +241,63 @@ article {
     padding: 0 0 5px 0;
   }
 
-  article .content {
-    margin: 16px 0 0 0;
-  }
-
-  article .content p {
-    margin: 0 0 8px 0;
-  }
-
-  article .content a.button {
-    color: var(--button-color);
-    border: solid 1px var(--button-background-color);
-    background-color: var(--button-background-color);
-    border-radius: 3px;
-    padding: 4px 10px 5px;
-    display: inline-block;
-    margin: 8px 8px 0 0;
-    width: max-content;
-    transition: background-color .2s, color .2s;
-    font-size: 14px;
-    text-decoration: none;
-  }
-
-  article .content a.button.code{
-    color: var(--button2-color);
-    border-color: var(--button2-border-color);
-    background-color: transparent;
-    background-position: 10px center;
-    background-repeat: no-repeat;
-    padding-left: 28px;
-  }
-
   article .description {
     color: var(--item-description-color);
     font-weight: 100;
-    margin: 0 0 16px 0;
+    margin-bottom: var(--article-item-gap);
   }
 
-  article .install {
-    margin: 0 0 5px 0;
+  article .tags {
+    margin-bottom: calc( var(--article-item-gap) - 4px);
   }
 
-  article .install::before {
-    margin: 0 10px 0 0;
-    display: inline-block;
-    content: "Install: ";
-    font-weight: 600;
+    article .tags .tag {
+      font-size: 13px;
+      font-weight: normal;
+      color: var(--tag-color);
+      padding: 3px 5px 4px 5px;
+      border-radius: 3px;
+      background-color: var(--tag-background-color);
+      margin: 0px 4px 4px 0;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    article .tags .tag.found {
+      box-shadow: inset 0 -10px 0px -7px var(--tag-match-background-color);
+    }
+
+  article .content {
+    margin-bottom: var(--article-item-gap);
   }
 
-  article .issues::before {
-    margin: 0 10px 0 0;
-    display: inline-block;
-    content: "Issues: ";
-    font-weight: 600;
+    article .content p {
+      margin: 0 0 8px 0;
+    }
+
+  article .links {
+    display: flex; /* Align buttons vertically */
   }
+
+    article .links .button {
+      color: var(--button-color);
+      border: solid 1px var(--button-background-color);
+      background-color: var(--button-background-color);
+      border-radius: 3px;
+      padding: 4px var(--button-padding-vertical) 5px;
+      display: inline-flex;
+      align-items: center;
+      margin: 0 8px 8px 0;
+      width: max-content;
+      transition: background-color .2s, color .2s;
+      text-decoration: none;
+    }
+
+    article .links .button.code {
+      background-color: transparent;
+      color: var(--button2-color);
+      border-color: var(--button2-border-color);
+    }
 
   article .img {
     grid-column: 1;
@@ -339,10 +310,10 @@ article {
     border-radius: 4px;
   }
 
-  article .img img {
-    width: auto;
-    max-height: 213px;
-  }
+    article .img img {
+      width: auto;
+      max-height: 213px;
+    }
 
 
 @media only screen and (max-width: 900px) {

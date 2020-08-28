@@ -1,6 +1,8 @@
 body  {
   --item-heading-font-size: 17px;
   --item-font-size: 14px;
+  --button-padding-vertical: 10px;
+  --article-item-gap: 16px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -28,10 +30,6 @@ body  {
     --button2-border-color: #696969;
   }
 
-  a.button.code{
-    background-image: url(../img/icon-code-light.svg);
-  }
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -57,10 +55,6 @@ body  {
     --button-background-color: #4469ab;
     --button2-color: #bdbdbd;
     --button2-border-color: #bdbdbd;
-  }
-
-  a.button.code{
-    background-image: url(../img/icon-code-dark.svg);
   }
 
 }

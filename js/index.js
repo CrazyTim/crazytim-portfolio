@@ -40,6 +40,11 @@ function initalise() {
     filter('');
   };
 
+  document.querySelector('.icon-filter').onclick = () => {
+    filterBox.setSelectionRange(0,0);
+    filterBox.focus();
+  }
+
 }
 
 /**

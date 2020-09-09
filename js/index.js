@@ -55,46 +55,45 @@ function filter(filterText) {
   const filterWrapper = document.querySelector('.filter');
   const filterResult = document.querySelector('.filter-wrapper .result');
 
-  // Find matching tags and visually highlight them.
-  // Build a list of the matching articles.
-  let found;
+  // Build list of matching articles and visually highlight matching tags:
+  let foundArticles;
   {
-    const f = new Set();
-    for (let i = 0; i < articles.length; i++) {
-      const tags = articles[i].querySelectorAll('.tag');
-      for (let j = 0; j < tags.length; j++) {
-        if (tags[j].textContent.includes(filterText)) {
+    const found = new Set();
+    articles.forEach(article => {
+      const tags = article.querySelectorAll('.tag');
+      tags.forEach(tag => {
+        if (tag.textContent.includes(filterText)) {
           if (filterText !== '') {
-            tags[j].classList.add('found');
+            tag.classList.add('found');
           } else {
-            tags[j].classList.remove('found');
+            tag.classList.remove('found');
           }
-          f.add(articles[i]);
+          found.add(article);
         } else {
-          tags[j].classList.remove('found');
+          tag.classList.remove('found');
         }
-      }
-    }
-    found = Array.from(f);
+      });
+    });
+    foundArticles = Array.from(found);
   }
 
   // Show found articles, hide the rest:
-  for (let i = 0; i < articles.length; i++) {
-    if (found.includes(articles[i])) {
-      articles[i].classList.remove('hidden');
+  articles.forEach(article => {
+    if (foundArticles.includes(article)) {
+      article.classList.remove('hidden');
     } else {
-      articles[i].classList.add('hidden');
+      article.classList.add('hidden');
     }
-  }
+  });
 
   // Display the number of found articles:
-  if (found.length === articles.length) {
+  if (foundArticles.length === articles.length) {
     filterWrapper.classList.remove('found');
     filterResult.classList.add('hidden');
   } else {
     filterWrapper.classList.add('found');
     filterResult.classList.remove('hidden');
-    filterResult.textContent = found.length + ' ' + (found.length === 1 ? 'Match' : 'Matches');
+    filterResult.textContent = foundArticles.length + ' ' + (foundArticles.length === 1 ? 'Match' : 'Matches');
   }
 
 }

@@ -293,10 +293,18 @@ article {
       text-decoration: none;
     }
 
+    article .links .button:hover {
+      background-color: var(--button-background-color-hover);
+    }
+
     article .links .button.code {
       background-color: transparent;
       color: var(--button2-color);
       border-color: var(--button2-border-color);
+    }
+
+    article .links .button.code:hover {
+      background-color: var(--button2-background-color-hover);
     }
 
   article .img {

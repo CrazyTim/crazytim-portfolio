@@ -3,6 +3,8 @@ body  {
   --item-font-size: 14px;
   --button-padding-vertical: 10px;
   --article-item-gap: 16px;
+  --button-background-color: #4469ab;
+  --button-background-color-hover: #5676af;
 }
 
 @media (prefers-color-scheme: light) {
@@ -25,9 +27,9 @@ body  {
     --filter-border-color: #696969;
 
     --button-color: #fff;
-    --button-background-color: #4469ab;
     --button2-color: #696969;
     --button2-border-color: #696969;
+    --button2-background-color-hover: #00000012;
   }
 
 }
@@ -52,9 +54,9 @@ body  {
     --filter-border-color: #bdbdbd;
 
     --button-color: #fff;
-    --button-background-color: #4469ab;
     --button2-color: #bdbdbd;
     --button2-border-color: #bdbdbd;
+    --button2-background-color-hover: #ffffff12;
   }
 
 }

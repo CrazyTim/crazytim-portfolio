@@ -332,7 +332,7 @@ article {
 
 @media only screen and (max-width: 800px) {
 
-  .content-wrapper {
+  section .content-wrapper {
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -347,9 +347,9 @@ article {
 
 @media only screen and (max-width: 700px) {
 
-  .content-wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
+  section .content-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
 	article {
@@ -376,5 +376,14 @@ article {
  		max-height: unset;
     width: 100%;
 	}
+
+}
+
+@media only screen and (max-width: 400px) {
+
+  section .content-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
 }

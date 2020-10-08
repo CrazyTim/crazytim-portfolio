@@ -308,7 +308,8 @@ article {
       background-color: var(--button2-background-color-hover);
     }
 
-  article .img {
+  article figure {
+    margin: 0; /* Reset Chrome */
     grid-column: 1;
     grid-row: span 4;
     width: 100%;
@@ -319,7 +320,7 @@ article {
     border-radius: 4px;
   }
 
-    article .img img {
+    article figure img {
       width: auto;
       max-height: 213px;
     }
@@ -331,8 +332,8 @@ article {
 		grid-template-columns: 260px auto;
 	}
 
-  article .img,
-  article .img img {
+  article figure,
+  article figure img {
   	max-height: 173px;
   }
 
@@ -370,21 +371,21 @@ article {
     padding-bottom: 0;
   }
 
-	article .img {
+	article figure {
 		grid-row: 1;
 		margin-bottom: 24px;
 		max-height: 150px;
 		max-width: 370px;
   }
 
+    article figure img {
+   		max-height: unset;
+      width: 100%;
+  	}
+
   article .content {
 		grid-column: 1;
   }
-
-  article .img img {
- 		max-height: unset;
-    width: 100%;
-	}
 
 }
 

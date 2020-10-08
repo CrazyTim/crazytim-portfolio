@@ -289,16 +289,17 @@ article {
       align-items: center;
       margin: 0 8px 8px 0;
       width: max-content;
-      transition: background-color .2s, color .2s;
+      transition: background-color .2s, color .2s, border-color .2s;
       text-decoration: none;
     }
 
     article .links .button:hover {
       background-color: var(--button-background-color-hover);
+      border-color: var(--button-background-color-hover);
     }
 
     article .links .button.code {
-      background-color: transparent;
+      background-color: var(--button2-background-color);
       color: var(--button2-color);
       border-color: var(--button2-border-color);
     }

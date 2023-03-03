@@ -32,7 +32,7 @@ function initalise() {
   const filterBoxClearButton = document.querySelector('.filter .button-clear');
 
   filterBox.oninput = () => {
-    filter(filterBox.value.toLowerCase());
+    filter(filterBox.value.toLowerCase().trim());
   };
 
   filterBoxClearButton.onclick = () => {

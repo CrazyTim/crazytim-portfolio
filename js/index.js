@@ -31,24 +31,24 @@ function initalise() {
   const filterBox = document.querySelector('.filter input');
   const filterBoxClearButton = document.querySelector('.filter .button-clear');
 
-  filterBox.oninput = () => {
+  filterBox.addEventListener('input', () => {
     filter(filterBox.value.toLowerCase().trim());
-  };
+  });
 
-  filterBoxClearButton.onclick = () => {
+  filterBoxClearButton.addEventListener('click', () => {
     filterBox.value = '';
     filter('');
-  };
+  });
 
-  document.querySelector('.icon-filter').onclick = () => {
+  document.querySelector('.icon-filter').addEventListener('click', () => {
     filterBox.setSelectionRange(0,0);
     filterBox.focus();
-  }
+  });
 
 }
 
 /**
- * Highlight tags that match `filterText` and hide articles that don't have matching tags.
+ * Find articles with tags that match `filterText`, hide the other articles, and highlight the matching tags.
  */
 function filter(filterText) {
 

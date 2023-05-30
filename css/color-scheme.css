@@ -3,34 +3,41 @@ body  {
   --item-font-size: 14px;
   --button-padding-vertical: 10px;
   --article-item-gap: 16px;
-  --button-background-color: #4469ab;
-  --button-background-color-hover: #2b5298;
+  --button-background-color: hsl(218, 43%, 47%);
+  --button-background-color-hover: hsl(219, 56%, 38%);
+
+  --header-button-color: hsl(0, 0%, 15%);
+  --header-button-background-color: hsl(0, 0%, 100%);
+  --page-heading-color: hsl(0, 0%, 100%);
+  --page-heading-color-shadow: hsla(211, 18%, 63%, 0.529);
+  --item-figure-color-shadow: hsla(0, 0%, 8%, 0.302);
+  --header-avatar-color-shadow: hsla(0, 0%, 8%, 0.302);
 }
 
 @media (prefers-color-scheme: light) {
 
   body  {
-    --body-background-color: #fff;
-    --color: #000;
+    --body-background-color: hsl(0, 0%, 100%);
+    --color: hsl(0, 0%, 0%);
 
-    --item-divider-color: #bfbfbf;
-    --item-description-color: #222;
+    --item-divider-color: hsl(0, 0%, 75%);
+    --item-description-color: hsl(0, 0%, 13%);
 
-    --tag-background-color: #d6e7ef;
-    --tag-color: #484848;
-    --tag-match-background-color: #ffb961;
+    --tag-background-color: hsl(199, 44%, 89%);
+    --tag-color: hsl(0, 0%, 28%);
+    --tag-match-background-color: hsl(33, 100%, 69%);
 
-    --h3-color: #000;
+    --h3-color: hsl(0, 0%, 0%);
 
-    --link-color: #0041b5;
+    --link-color: hsl(218, 100%, 35%);
 
-    --filter-border-color: #696969;
+    --filter-border-color: hsl(0, 0%, 41%);
 
-    --button-color: #fff;
-    --button2-color: #696969;
-    --button2-border-color: #696969;
+    --button-color: hsl(0, 0%, 100%);
+    --button2-color: hsl(0, 0%, 41%);
+    --button2-border-color: hsl(0, 0%, 41%);
     --button2-background-color: transparent;
-    --button2-background-color-hover: #ebeef3;
+    --button2-background-color-hover: hsl(217, 25%, 94%);
   }
 
 }
@@ -38,26 +45,26 @@ body  {
 @media (prefers-color-scheme: dark) {
 
   body  {
-    --body-background-color: #252525;
-    --color: #fff;
+    --body-background-color: hsl(0, 0%, 15%);
+    --color: hsl(0, 0%, 100%);
 
-    --item-divider-color: #505050;
-    --item-description-color: #bdbdbd;
+    --item-divider-color: hsl(0, 0%, 31%);
+    --item-description-color: hsl(0, 0%, 74%);
 
-    --tag-background-color: #3c454c;
-    --tag-color: #dcddde;
-    --tag-match-background-color: #bd405e;
+    --tag-background-color: hsl(206, 12%, 27%);
+    --tag-color: hwb(210 87% 13%);
+    --tag-match-background-color: hsl(346, 49%, 50%);
 
-    --h3-color: #fff;
+    --h3-color: hsl(0, 0%, 100%);
 
-    --link-color: #89b2fb;
+    --link-color: hsl(218, 93%, 76%);
 
-    --filter-border-color: #bdbdbd;
+    --filter-border-color: hsl(0, 0%, 74%);
 
-    --button-color: #fff;
-    --button2-color: #c5c5c5;
-    --button2-border-color: #bdbdbd;
-    --button2-background-color: #ffffff12;
+    --button-color: hsl(0, 0%, 100%);
+    --button2-color: hsl(0, 0%, 77%);
+    --button2-border-color: hsl(0, 0%, 74%);
+    --button2-background-color: hsla(0, 0%, 100%, 0.071);
     --button2-background-color-hover: transparent;
   }
 

@@ -1,7 +1,7 @@
 body, html {
   margin: 0 10px;
   padding: 0;
-  background-color: #525659;
+  background-color: hsl(206, 4%, 34%);
 }
 
 body {
@@ -16,5 +16,5 @@ body {
 img {
   max-width: 100%;
   margin: 10px 0;
-  box-shadow: 2px 2px 6px 0px rgb(0, 0, 0, 0.7);
+  box-shadow: 2px 2px 6px 0px hsla(0, 0%, 0%, 0.7);
 }

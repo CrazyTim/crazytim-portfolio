@@ -7,9 +7,19 @@
 }
 
 body {
+  --item-heading-font-size: 17px;
+  --item-font-size: 15px;
+  --button-padding-vertical: 10px;
+  --article-item-gap: 16px;
+  --padding-h: 50px;
+  --figure-max-width: unset;
+  --figure-max-height: 212px;
+  --section-gap: 40px;
   overflow-y: scroll;
   background-color: var(--body-background-color);
   color: var(--color);
+  display: grid;
+  gap: var(--section-gap);
 }
 
 a svg {
@@ -38,6 +48,12 @@ ul {
   list-style: none;
 }
 
+button {
+  /* Reset */
+  background-color: transparent;
+  border: none;
+}
+
 .hidden {
   display: none !important;
 }
@@ -46,11 +62,33 @@ ul {
   opacity: .6; /* Reset Firefox */
 }
 
-.filter-wrapper {
-    margin: 0 0 40px 0;
+header,
+section {
+  display: grid;
+  justify-content: center;
+  font-weight: 100;
+  font-size: 17px;
+  grid-template-columns: minmax(0, 875px);
 }
 
-  .filter-wrapper .result {
+section:last-of-type {
+  padding-bottom: var(--section-gap);
+}
+
+header > *,
+section > * {
+  padding: 0 var(--padding-h);
+}
+
+section > *:last-child {
+  margin-bottom: 0px;
+}
+
+search {
+    margin: 0 0 var(--section-gap) 0;
+}
+
+search .result {
     padding: 9px;
     background-color: var(--tag-match-background-color);
     border-radius: 3px;
@@ -59,7 +97,7 @@ ul {
     margin-top: 4px;
   }
 
-  .filter-wrapper .filter {
+  search .filter {
     display: flex;
     align-items: stretch;
     font-size: 15px;
@@ -111,12 +149,6 @@ li {
   margin-bottom: 10px;
 }
 
-section.portfolio {
-	display: grid;
-	row-gap: 20px;
-  padding-top: 0px;
-}
-
 a, a:visited {
   color: var(--link-color);
   transition: background-color .2s, color .2s;
@@ -126,23 +158,29 @@ section.articles {
   display: none;
 }
 
-section.header {
-  color: white;
-  padding-top: 40px;
-  margin-bottom: 40px;
-  background-image: url('../img/header.jpg');
-  background-size: cover;
-  background-position-y: center;
+section.portfolio {
+  gap: var(--section-gap);
+  min-height: 200px; /* Maintain empty space if the filter has zero results */
 }
 
-  section.header .links {
-    margin: 30px 0 10px 0;
+header {
+  position: relative;
+  color: white;
+  padding: var(--section-gap) 0;
+  background-image: url('../img/header.jpg');
+  background-size: cover;
+  background-position-y: 67%;
+}
+
+  header .links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
   }
 
-  section.header .links a {
+  header .links a {
     display: inline-flex;
-    align-items: center;
-    white-space: nowrap;
     text-decoration: none;
     padding: 6px var(--button-padding-vertical) 7px;
     color: var(--header-button-color);
@@ -166,20 +204,6 @@ section.header {
   display: flex;
   align-content: center;
   align-items: center;
-}
-
-section .content-wrapper {
-  padding: 0px 50px 30px;
-  max-width: 875px;
-  width: 100%;
-  margin: 0 auto;
-  font-weight: 100;
-  font-size: 17px;
-  box-sizing: border-box;
-}
-
-section ul {
-  margin: 15px 0 20px 0;
 }
 
 h1 {
@@ -212,10 +236,12 @@ article {
   grid-template-columns: 320px auto;
   grid-template-rows: auto;
   column-gap: 20px;
-  padding-bottom: 30px;
   padding-top: 20px;
   border-top: 1px solid var(--item-divider-color);
   font-size: var(--item-font-size);
+  margin: 0 var(--padding-h);
+  padding-left: 0;
+  padding-right: 0;
 }
 
   article h4 {
@@ -229,6 +255,7 @@ article {
     color: var(--item-description-color);
     font-weight: 100;
     margin-bottom: var(--article-item-gap);
+    font-size: 16px;
   }
 
   article .tags {
@@ -239,7 +266,7 @@ article {
       font-size: 13px;
       font-weight: normal;
       color: var(--tag-color);
-      padding: 3px 5px 4px 5px;
+      padding: 3px 7px 4px 7px;
       border-radius: 3px;
       background-color: var(--tag-background-color);
       margin: 0px 4px 4px 0;
@@ -251,12 +278,8 @@ article {
       box-shadow: inset 0 -10px 0px -7px var(--tag-match-background-color);
     }
 
-  article .content {
-    margin-bottom: var(--article-item-gap);
-  }
-
     article .content p {
-      margin: 0 0 8px 0;
+      margin-bottom: 8px;
     }
 
   article .links {
@@ -301,36 +324,47 @@ article {
     height: 100%;
     overflow: hidden;
     box-shadow: 7px 11px 9px -7px var(--item-figure-color-shadow);
-    max-height: 212px;
+    max-width: var(--figure-max-width);
+    max-height: var(--figure-max-height);
     border-radius: 4px;
     user-select: none;
+    display: flex;
+    align-content: center;
   }
 
     article figure img {
-      width: auto;
-      max-height: 213px;
+      width: 100%;
+      align-self: start;
     }
 
+    article figure img.align-center {
+      align-self: center;
+    }
 
+    article figure img.align-end {
+      align-self: end;
+    }
+
+/*************************************************/
+/*************************************************/
 @media only screen and (max-width: 900px) {
+
+  body {
+    --figure-max-height: 173px;
+  }
 
 	article {
 		grid-template-columns: 260px auto;
 	}
 
-  article figure,
-  article figure img {
-  	max-height: 173px;
-  }
-
 }
 
-
+/*************************************************/
+/*************************************************/
 @media only screen and (max-width: 800px) {
 
-  section .content-wrapper {
-    padding-left: 40px;
-    padding-right: 40px;
+  body {
+    --padding-h: 40px;
   }
 
   .avatar {
@@ -340,34 +374,24 @@ article {
 
 }
 
-
+/*************************************************/
+/*************************************************/
 @media only screen and (max-width: 700px) {
 
-  section .content-wrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+  body{
+    --padding-h: 30px;
+    --figure-max-width: 370px;
+    --figure-max-height: 150px;
   }
 
 	article {
 		grid-template-columns: auto;
-		padding-bottom: 40px;
 	}
-
-  article:last-of-type {
-    padding-bottom: 0;
-  }
 
 	article figure {
 		grid-row: 1;
 		margin-bottom: 24px;
-		max-height: 150px;
-		max-width: 370px;
   }
-
-    article figure img {
-   		max-height: unset;
-      width: 100%;
-  	}
 
   article .content {
 		grid-column: 1;
@@ -375,11 +399,12 @@ article {
 
 }
 
+/*************************************************/
+/*************************************************/
 @media only screen and (max-width: 400px) {
 
-  section .content-wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
+  body{
+    --padding-h: 20px;
   }
 
 }

@@ -1,11 +1,6 @@
 body  {
-  --item-heading-font-size: 17px;
-  --item-font-size: 14px;
-  --button-padding-vertical: 10px;
-  --article-item-gap: 16px;
   --button-background-color: hsl(218, 43%, 47%);
   --button-background-color-hover: hsl(219, 56%, 38%);
-
   --header-button-color: hsl(0, 0%, 15%);
   --header-button-background-color: hsl(0, 0%, 100%);
   --page-heading-color: hsl(0, 0%, 100%);

@@ -10,10 +10,10 @@ body {
   --item-heading-font-size: 17px;
   --item-font-size: 15px;
   --button-padding-vertical: 10px;
-  --article-item-gap: 16px;
+  --item-spacing: 16px;
   --padding-h: 50px;
-  --figure-max-width: unset;
-  --figure-max-height: 212px;
+  --item-img-max-width: unset;
+  --item-img-max-height: 212px;
   --section-gap: 40px;
   overflow-y: scroll;
   background-color: var(--body-background-color);
@@ -254,12 +254,12 @@ article {
   article .description {
     color: var(--item-description-color);
     font-weight: 100;
-    margin-bottom: var(--article-item-gap);
+    margin-bottom: var(--item-spacing);
     font-size: 16px;
   }
 
   article .tags {
-    margin-bottom: calc( var(--article-item-gap) - 4px);
+    margin-bottom: calc( var(--item-spacing) - 4px);
   }
 
     article .tags .tag {
@@ -316,33 +316,28 @@ article {
       background-color: var(--button2-background-color-hover);
     }
 
-  article figure {
+  article > img {
     margin: 0; /* Reset Chrome */
     grid-column: 1;
     grid-row: span 4;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    box-shadow: 7px 11px 9px -7px var(--item-figure-color-shadow);
-    max-width: var(--figure-max-width);
-    max-height: var(--figure-max-height);
+    box-shadow: 7px 11px 9px -7px var(--item-img-color-shadow);
+    max-width: var(--item-img-max-width);
+    max-height: var(--item-img-max-height);
     border-radius: 4px;
     user-select: none;
-    display: flex;
-    align-content: center;
+    object-fit:cover;
+    object-position: top;
   }
 
-    article figure img {
-      width: 100%;
-      align-self: start;
+    article > img.align-center {
+      object-position: center;
     }
 
-    article figure img.align-center {
-      align-self: center;
-    }
-
-    article figure img.align-end {
-      align-self: end;
+    article > img.align-bottom {
+      object-position: bottom;
     }
 
 /*************************************************/
@@ -350,7 +345,7 @@ article {
 @media only screen and (max-width: 900px) {
 
   body {
-    --figure-max-height: 173px;
+    --item-img-max-height: 173px;
   }
 
 	article {
@@ -380,15 +375,15 @@ article {
 
   body{
     --padding-h: 30px;
-    --figure-max-width: 370px;
-    --figure-max-height: 150px;
+    --item-img-max-width: 370px;
+    --item-img-max-height: 150px;
   }
 
 	article {
 		grid-template-columns: auto;
 	}
 
-	article figure {
+	article > img {
 		grid-row: 1;
 		margin-bottom: 24px;
   }

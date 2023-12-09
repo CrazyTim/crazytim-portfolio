@@ -7,7 +7,7 @@
 
 ```
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve -o -l
 ```
 
 Refer to [testing-your-github-pages-site-locally-with-jekyll](https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll).

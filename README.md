@@ -12,6 +12,8 @@ bundle exec jekyll serve -o -l
 
 Refer to [testing-your-github-pages-site-locally-with-jekyll](https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll).
 
+To keep dependancies in-line with github pages, see https://pages.github.com/versions/
+
 ### SEO
 
 Refer to [jekyll-seo-tag usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md) (used by Minima theme).

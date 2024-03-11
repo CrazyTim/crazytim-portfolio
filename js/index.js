@@ -51,6 +51,12 @@ function initalise() {
     filterWrapper.append(btn);
     btn.addEventListener('click', () => {
       btn.classList.toggle('selected');
+
+      // Scroll to filter section if out of view
+      if (document.querySelector('section.portfolio').getBoundingClientRect().y > window.innerHeight) {
+        document.querySelector('section.filter').scrollIntoView({behavior:'smooth'});
+      }
+
       filter(
         tagButtons.filter(btn => btn.classList.contains('selected')).map(btn => btn.textContent)
       );

@@ -253,6 +253,7 @@ article {
 
   article .links {
     display: flex; /* Align buttons vertically */
+    margin-top: var(--item-spacing);
   }
 
     article .links .button {

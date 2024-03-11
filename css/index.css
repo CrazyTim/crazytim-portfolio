@@ -85,54 +85,24 @@ section > *:last-child {
 }
 
 search {
-    margin: 0 0 var(--section-gap) 0;
+  margin: 0 0 var(--section-gap) 0;
 }
 
-search .result {
-    padding: 9px;
-    background-color: var(--tag-match-background-color);
-    border-radius: 3px;
-    padding: 3px 5px 4px 5px;
-    width: 250px;
-    margin-top: 4px;
-  }
-
-  search .filter {
-    display: flex;
-    align-items: stretch;
-    font-size: 15px;
-    width: 250px;
-    border: solid 1px var(--filter-border-color);
-    border-radius: 4px;
-    overflow: hidden;
-    color: var(--button2-color);
-  }
-
-  .filter .icon-filter {
-    display: flex;
-    align-items: center;
-    padding: 0 6px;
-  }
-
-  .filter input {
-    border: 0px;
-    padding: 8px 8px 9px 0;
-    background-color: transparent;
-    font-size: 15px;
-    width: 100%;
-  }
-
-  .filter .button-clear {
-    display: none;
-    align-items: center;
-    padding: 0 var(--button-padding-vertical);
-    cursor: pointer;
-    color: var(--button2-color);
-  }
-
-  .filter.found .button-clear {
-    display: flex;
-  }
+search button {
+  padding: 6px var(--button-padding-vertical) 7px;
+  color: var(--tag-color);
+  transition: background-color .1s;
+  border-radius: 3px;
+  background-color: var(--tag-background-color);
+  margin: 4px;
+  font-weight: normal;
+  font-size: 14px;
+  cursor: pointer;
+}
+search button.selected {
+  color: var(--tag-color);
+  background-color: var(--tag-match-background-color);
+}
 
 li::before {
   content: "•";
@@ -160,7 +130,6 @@ section.articles {
 
 section.portfolio {
   gap: var(--section-gap);
-  min-height: 200px; /* Maintain empty space if the filter has zero results */
 }
 
 header {

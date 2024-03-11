@@ -1,99 +1,101 @@
-let articles;
+window.articles = [];
+/*
+List of article objects:
+  {
+    node: DOM Node
+    tagNodes: Array
+  }
+*/
+
+const uniqueTags = new Set();
+const tagButtons = [];
+const filterWrapper = document.querySelector('.filter search');
+const filterResult = document.querySelector('.filter .filter-results');
 
 window.addEventListener('DOMContentLoaded', () => initalise() );
 
 function initalise() {
-
-  articles = document.querySelectorAll('article');
-
-  // Build tags:
-  // Tags are written in plain text for convenience.
-  // Convert them to DOM elements so they can be styled.
-  document.querySelectorAll('.tags').forEach(e => {
-    let html = '';
-    e.innerHTML.split(",").forEach(w => {
-      if (w.trim() === '') { return; }
-      html += '<span class="tag">'
-        + w.trim().toLowerCase()
-        + '&ZeroWidthSpace;'  // Prevent double-click selection from spilling into adjacent span.
-        + '</span>';
-    });
-    e.innerHTML = html;
-  });
 
   // Ensure all links open in a new tab:
   document.querySelectorAll('a').forEach(e => {
     e.getAttribute('href') && e.hostname !== location.hostname && (e.target = '_blank') && (e.rel = 'noopener');
   });
 
-  // Define event listners...
-
-  const filterBox = document.querySelector('.filter input');
-  const filterBoxClearButton = document.querySelector('.filter .button-clear');
-
-  filterBox.addEventListener('input', () => {
-    filter(filterBox.value.toLowerCase().trim());
+  // Build tags - convert them to DOM elements so they can be styled.
+  // Tags are written in plain text for convenience when writing the html.
+  document.querySelectorAll('.tags').forEach(e => {
+    let html = '';
+    e.innerHTML.split(",").forEach(w => {
+      if (w.trim() === '') { return; }
+      let tag = w.trim().toLowerCase();
+      uniqueTags.add(tag);
+      html += `<span class="tag">${tag}</span>`
+        + '&ZeroWidthSpace;';  // Prevent double-click selection from spilling into adjacent span.
+    });
+    e.innerHTML = html;
   });
 
-  filterBoxClearButton.addEventListener('click', () => {
-    filterBox.value = '';
-    filter('');
+  // Build list of articles:
+  document.querySelectorAll('article').forEach(article => {
+    articles.push({
+      node: article,
+      tagNodes: Array.from(article.querySelectorAll('.tag')),
+    })
   });
 
-  document.querySelector('.icon-filter').addEventListener('click', () => {
-    filterBox.setSelectionRange(0,0);
-    filterBox.focus();
+  // Add filter buttons for each tag:
+  [...uniqueTags].toSorted().forEach(tag => {
+    const btn = document.createElement('button');
+    tagButtons.push(btn);
+    btn.textContent = tag;
+    filterWrapper.append(btn);
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('selected');
+      filter(
+        tagButtons.filter(btn => btn.classList.contains('selected')).map(btn => btn.textContent)
+      );
+    });
   });
 
 }
 
 /**
- * Find articles with tags that match `filterText`, hide the other articles, and highlight the matching tags.
+ * Find articles with certain tags, hide the other articles, and highlight the matching tags.
  */
-function filter(filterText) {
+function filter(terms = []) {
 
-  const filterWrapper = document.querySelector('.filter');
-  const filterResult = document.querySelector('.filter-wrapper .result');
+  const found = new Set();
 
-  // Build list of matching articles and visually highlight matching tags:
-  let foundArticles;
-  {
-    const found = new Set();
-    articles.forEach(article => {
-      const tags = article.querySelectorAll('.tag');
-      tags.forEach(tag => {
-        if (tag.textContent.includes(filterText)) {
-          if (filterText !== '') {
-            tag.classList.add('found');
-          } else {
-            tag.classList.remove('found');
-          }
-          found.add(article);
-        } else {
-          tag.classList.remove('found');
-        }
-      });
+  articles.forEach(article => {
+    article.tagNodes.forEach(tagNode => {
+      if (terms.includes(tagNode.textContent)) {
+        tagNode.classList.add('found');
+        found.add(article);
+      } else {
+        tagNode.classList.remove('found');
+      }
     });
-    foundArticles = Array.from(found);
-  }
+  });
+
+  let foundArticles = Array.from(found);
+
+  if (foundArticles.length === 0) foundArticles = articles;
 
   // Show found articles, hide the rest:
   articles.forEach(article => {
     if (foundArticles.includes(article)) {
-      article.classList.remove('hidden');
+      article.node.classList.remove('hidden');
     } else {
-      article.classList.add('hidden');
+      article.node.classList.add('hidden');
     }
   });
 
   // Display the number of found articles:
-  if (foundArticles.length === articles.length) {
-    filterWrapper.classList.remove('found');
+  if (foundArticles.length === 0 || foundArticles.length === articles.length) {
     filterResult.classList.add('hidden');
   } else {
-    filterWrapper.classList.add('found');
     filterResult.classList.remove('hidden');
-    filterResult.textContent = foundArticles.length + ' ' + (foundArticles.length === 1 ? 'Match' : 'Matches');
+    filterResult.textContent = ' (' + foundArticles.length + ' ' + (foundArticles.length === 1 ? 'Match' : 'Matches') + ')';
   }
 
 }

@@ -63,6 +63,11 @@ function initalise() {
     });
   });
 
+  filterResult.addEventListener('click', () => {
+    tagButtons.forEach(btn => btn.classList.remove('selected'));
+    filter([]);
+  });
+
 }
 
 /**
@@ -101,7 +106,7 @@ function filter(terms = []) {
     filterResult.classList.add('hidden');
   } else {
     filterResult.classList.remove('hidden');
-    filterResult.textContent = ' (' + foundArticles.length + ' ' + (foundArticles.length === 1 ? 'Match' : 'Matches') + ')';
+    filterResult.textContent = foundArticles.length + ' ' + (foundArticles.length === 1 ? 'Match' : 'Matches');
   }
 
 }

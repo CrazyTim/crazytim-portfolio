@@ -84,6 +84,16 @@ section > *:last-child {
   margin-bottom: 0px;
 }
 
+section.filter .filter-results {
+  background-color: var(--tag-match-background-color);
+  padding: 0 6px 1px 6px;
+  border-radius: 3px;
+  margin-left: 4px;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
 search {
   margin: 0 0 var(--section-gap) 0;
 }

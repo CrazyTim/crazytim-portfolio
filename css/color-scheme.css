@@ -1,6 +1,6 @@
 body  {
   --button-background-color: hsl(218, 43%, 47%);
-  --button-background-color-hover: hsl(219, 56%, 38%);
+  --button-background-color-hover: hsl(218, 43%, 52%);
   --header-button-color: hsl(0, 0%, 15%);
   --header-button-background-color: hsl(0, 0%, 100%);
   --page-heading-color: hsl(0, 0%, 100%);
@@ -19,8 +19,10 @@ body  {
     --item-description-color: hsl(0, 0%, 13%);
 
     --tag-background-color: hsl(199, 44%, 89%);
+    --tag-background-color-hover: hsl(199, 44%, 92%);
     --tag-color: hsl(0, 0%, 28%);
     --tag-match-background-color: hsl(33, 100%, 69%);
+    --tag-match-background-color-hover: hsl(33, 100%, 74%);
 
     --h3-color: hsl(0, 0%, 0%);
 
@@ -47,8 +49,10 @@ body  {
     --item-description-color: hsl(0, 0%, 74%);
 
     --tag-background-color: hsl(206, 12%, 27%);
+    --tag-background-color-hover: hsl(206, 12%, 33%);
     --tag-color: hsl(0 0% 90%);
     --tag-match-background-color: hsl(346, 49%, 50%);
+    --tag-match-background-color-hover: hsl(346, 49%, 55%);
 
     --h3-color: hsl(0, 0%, 100%);
 
@@ -59,8 +63,8 @@ body  {
     --button-color: hsl(0, 0%, 100%);
     --button2-color: hsl(0, 0%, 77%);
     --button2-border-color: hsl(0, 0%, 74%);
-    --button2-background-color: hsla(0, 0%, 100%, 0.071);
-    --button2-background-color-hover: transparent;
+    --button2-background-color: hsla(0, 0%, 74%, 0.07);
+    --button2-background-color-hover: hsla(0, 0%, 74%, 0.15);
   }
 
 }

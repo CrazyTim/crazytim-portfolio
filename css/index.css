@@ -95,6 +95,10 @@ section.filter .filter-results {
   cursor: pointer;
 }
 
+section.filter .filter-results:hover {
+  background-color: var(--tag-match-background-color-hover);
+}
+
 section.filter .filter-results svg {
   margin-bottom: 1px;
 }
@@ -114,9 +118,18 @@ search button {
   font-size: 14px;
   cursor: pointer;
 }
+
+search button:hover {
+  background-color: var(--tag-background-color-hover);
+}
+
 search button.selected {
   color: var(--tag-color);
   background-color: var(--tag-match-background-color);
+}
+
+search button.selected:hover {
+  background-color: var(--tag-match-background-color-hover);
 }
 
 li::before {

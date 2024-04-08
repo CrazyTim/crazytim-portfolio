@@ -47,7 +47,7 @@ body  {
     --item-description-color: hsl(0, 0%, 74%);
 
     --tag-background-color: hsl(206, 12%, 27%);
-    --tag-color: hwb(210 87% 13%);
+    --tag-color: hsl(0 0% 90%);
     --tag-match-background-color: hsl(346, 49%, 50%);
 
     --h3-color: hsl(0, 0%, 100%);

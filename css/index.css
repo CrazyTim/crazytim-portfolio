@@ -85,13 +85,18 @@ section > *:last-child {
 }
 
 section.filter .filter-results {
+  position: absolute;
   background-color: var(--tag-match-background-color);
-  padding: 0 6px 1px 6px;
+  padding: 3px 10px 3px 10px;
   border-radius: 3px;
-  margin-left: 4px;
+  margin-left: 12px;
   font-size: inherit;
   color: inherit;
   cursor: pointer;
+}
+
+section.filter .filter-results svg {
+  margin-bottom: 1px;
 }
 
 search {

@@ -106,7 +106,7 @@ function filter(terms = []) {
     filterResult.classList.add('hidden');
   } else {
     filterResult.classList.remove('hidden');
-    filterResult.textContent = foundArticles.length + ' ' + (foundArticles.length === 1 ? 'Match' : 'Matches');
+    filterResult.querySelector('span').textContent = foundArticles.length;
   }
 
 }

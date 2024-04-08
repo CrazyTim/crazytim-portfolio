@@ -117,6 +117,7 @@ search button {
   font-weight: normal;
   font-size: 14px;
   cursor: pointer;
+  user-select: none;
 }
 
 search button:hover {

@@ -1,8 +1,5 @@
 ### Todo
 - Add simple animation to the page.
-- Click on a tag to filter by it.
-- Replace filter with tag cloud.
-- Tweak code icon thickness.
 - Publish some articles.
 
 ##### Notes
